@@ -1,0 +1,37 @@
+.map
+    width 100%
+    position relative
+    background-color #fff
+    +above(1152px)
+        padding 0
+    &__map
+        display block
+        width 100%
+        height 0px
+        transition height .3s ease
+        background-color #eee
+        &.on
+            height 400px
+        +above(1152px)
+            display block
+            height 640px
+    &__baloon
+        margin 0 auto
+        +above(1152px)
+            position absolute
+            top 50%
+            transform translateY(-50%)
+            left 20px
+            margin 0
+            z-index 300
+        +above(1200px)
+            left 50%
+            margin-left -585px
+
+    &__button-wrapper
+        display block
+        text-align center
+        +above(1152px)
+            display none
+    &__button
+        margin-bottom 40px

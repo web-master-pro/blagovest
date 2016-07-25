@@ -1,0 +1,14 @@
+mixin form-meeting()
+    form(action="#" method="POST").form-meeting#form-meeting
+        .form-meeting__in
+            .input.form-meeting__input
+                label(for="form-meeting-name").input__label Как вас зовут?
+                input(type="text" name="name" placeholder="Как вас зовут?" required).input__input.input__input--name#form-meeting-name
+            .input.form-meeting__input
+                label(for="form-meeting-phone").input__label Номер телефона
+                input(type="tel" name="phone" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _" required).input__input.input__input--phone#form-meeting-phone
+            .checkbox.form-meeting__checkbox
+                input(type="checkbox" name="agree" required).checkbox__checkbox#form-meeting-agree
+                label(for="form-meeting-agree").checkbox__label Я согласен с <a href="#" target="_blank">правилами обработки</a> персональных данных
+            button(type="submit").button-submit.form-meeting__button
+                span Отправить

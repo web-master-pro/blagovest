@@ -1,0 +1,12 @@
+include ../form-search/form-search
+
+mixin side-right()
+    // Панель с формой поиска
+    .side-right&attributes(attributes)
+        .side-right__in
+            button(title="Закрыть (Esc)").side-right__close
+            h3.side-right__title Введите ключевой запрос
+            +form-search(class="side-right__form")
+            p.side-right__tip.side-right__tip--exit Нажмите <strong>”Esc”</strong> для выхода
+            p.side-right__tip.side-right__tip--submit Нажмите <strong>”Enter”</strong> для поиска
+

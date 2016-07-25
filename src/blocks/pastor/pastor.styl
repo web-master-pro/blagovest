@@ -1,0 +1,62 @@
+.pastor
+    display block
+    width 100%
+    background-color #fff
+
+    &__in
+        container(1210px)
+        padding 30px 20px
+        +above(1152px)
+            padding 140px 20px
+            display flex
+            flex-flow row nowrap
+            justify-content space-between
+            align-items center
+
+    &__photo
+        display block
+        max-width 100%
+        margin 0 auto 20px
+        +above(1152px)
+            flex 0 0 auto
+            margin 0
+
+    &__info
+        +above(1152px)
+            flex 0 1 670px
+
+    &__name
+        color #231f20
+        font()
+        font-size 20px
+        line-height 50px
+        margin 0 0 10px
+        span
+            display inline-block
+            color #faa926
+            font(Light)
+            font-size 60px
+            line-height 1
+            position relative
+            left -5px
+        +above(1152px)
+            font(Light)
+            font-size 24px
+            line-height 70px
+            margin 0 0 30px
+            span
+                font-size 90px
+                line-height 1
+                left -7px
+
+    &__position
+        color #848484
+        font(PTSans)
+        font-size 15px
+        line-height 20px
+        margin 0 0 30px
+        +above(1152px)
+            margin 0 0 40px
+
+
+

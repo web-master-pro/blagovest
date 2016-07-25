@@ -1,0 +1,12 @@
+
+include ../slider-report/slider-report
+
+mixin reportage()
+    section.reportage&attributes(attributes)
+        .reportage__in
+            .reportage__left
+                .reportage__valign
+                    h2.reportage__title С места события
+                    p.reportage__text Все эти изменения не могут произойти без принятия христианской системы ценностей, как основания для дальнейшей полноценной и трезвой жизни. Только полное переосмысливания ценностей своей жизни, через покаяние и веру в Иисуса Христа.
+            .reportage__right
+                +slider-report()

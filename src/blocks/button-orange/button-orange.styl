@@ -1,0 +1,60 @@
+.button-orange
+    display inline-block
+    height 40px
+    background-color #f3a62d
+    border none
+    outline none
+    color #f4f4f4
+    font(Extra)
+    font-size 15px
+    letter-spacing .025em
+    line-height 42px
+    text-transform uppercase
+    text-align center
+    text-decoration none
+    padding 0 20px
+    position relative
+    cursor pointer
+    span
+        position relative
+        z-index 2
+    &::before
+    &::after
+        content ""
+        display block
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        transition opacity .3s ease
+    &::before
+        opacity 1
+        background-image linear-gradient(135deg, #faa926 0%, #e38225 100%)
+    &::after
+        opacity 0
+        background-image linear-gradient(135deg, #ef9523 0%, #e22527 100%)
+    &:hover
+        color #f4f4f4
+        text-decoration none
+        &::before
+            opacity 0
+        &::after
+            opacity 1
+    &--small
+        height 35px
+        line-height 37px
+        font-size 12px
+        padding 0 15px
+
+
+    &--flat
+        color white
+        background-color #faa926
+        transition all .3s ease
+        &::before
+        &::after
+            display none
+        &:hover
+            color #1a4382
+            background-color #fff

@@ -1,0 +1,14 @@
+include ../menu-side/menu-side
+include ../phone/phone
+include ../email/email
+include ../button-white/button-white
+
+mixin side-left()
+    // Боковая панель для мобильного меню
+    .side-left&attributes(attributes)
+        +menu-side()
+        .side-left__contacts
+            +button-white("Пожертвовать")(class="button-white--big side-left__button")
+            +phone(class="side-left__phone")
+            +email(class="side-left__email")
+        +social(class="side-left__social social--side")

@@ -1,0 +1,65 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Наше видение")
+
+    body.page.page-our-vision
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-our-vision-bg.jpg);")
+                h1.header__title Наше видение
+                p.header__subtitle Мы верим, что любая церковь призвана для того, <br>чтобы отвечать на нужды людей, даря им любовь и надежду, <br>поэтому мы мечтаем и все делаем для того, чтобы наша <br>церковь стала ответом для всех, кто ищет мир, радость, общение <br>с Богом и людьми.
+            main.main
+                .main__in
+                    .block-vision
+                        .block-vision__row
+                            .block-vision__col
+                                img(src="assets/img/vision/our-vision-1.jpg" alt="").image-framed.image-framed--white
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold Любить
+                                    p Церковь — это такое место, где каждый человек может найти поддержку, принятие, помощь и прощение. Это большая семья, где мы любим друг друга, радуемся и живем в согласии.
+
+                        .block-vision__row.block-vision__row--reverse
+                            .block-vision__col
+                                img(src="assets/img/vision/our-vision-2.jpg" alt="").image-framed.image-framed--white
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold Дружить
+                                    p Мы хотим помочь людям достигать духовной зрелости, раскрывать и реализовывать таланты, дарованные им Богом, помогая исполнить Божье предназначение, ради которого стоит жить!
+
+                        .block-vision__row
+                            .block-vision__col
+                                img(src="assets/img/vision/our-vision-3.jpg" alt="").image-framed.image-framed--white
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold Расти
+                                    p Приводить людей ко Христу и помогать им становиться членами Его семьи, взращивать их в христианской зрелости, и оснащать их для служения в церкви и их жизненного предназначения в мире, ради того, чтобы прославлять имя Господа.
+
+                        .block-vision__row.block-vision__row--reverse
+                            .block-vision__col
+                                img(src="assets/img/vision/our-vision-4.jpg" alt="").image-framed.image-framed--white
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold Помогать
+                                    p Мы хотим помочь людям достигать духовной зрелости, раскрывать и реализовывать таланты, дарованные им Богом, помогая исполнить Божье предназначение, ради которого стоит жить!
+
+                        .block-vision__row
+                            .block-vision__col
+                                img(src="assets/img/vision/our-vision-5.jpg" alt="").image-framed.image-framed--white
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold Вдохновлять
+                                    p Приводить людей ко Христу и помогать им становиться членами Его семьи, взращивать их в христианской зрелости, и оснащать их для служения в церкви и их жизненного предназначения в мире, ради того, чтобы прославлять имя Господа.
+
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

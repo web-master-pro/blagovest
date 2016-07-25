@@ -1,0 +1,26 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/stories/stories
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Истории прихожан")
+
+    body.page.page-stories
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-stories-bg.jpg);")
+                h1.header__title Истории прихожан
+                p.header__subtitle Человек широкой души, любящий Господа и людей. <br>Отзывчивый и всегда хочет помочь. 
+            main.main
+                +stories()
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

@@ -1,0 +1,84 @@
+include ../logo/logo
+include ../menu-main/menu-main
+include ../button-blue/button-blue
+include ../button-orange/button-orange
+include ../button-search/button-search
+include ../button-lang/button-lang
+include ../button-nav/button-nav
+include ../side-left/side-left
+include ../side-right/side-right
+include ../m-box/m-box
+include ../form-donate/form-donate
+include ../slider-header/slider-header
+include ../social/social
+
+mixin header()
+    header.header&attributes(attributes)
+        .header__in
+            +logo(class="header__logo logo--small")
+            +menu-main(class="header__menu")
+            +button-blue("Пожертвовать")(class="header__button-donate")
+            +button-search(class="header__button-search")
+            +button-lang(class="header__button-lang")
+            +button-nav(class="header__button-nav")
+            .header__main
+                block
+
+mixin header-donations()
+    header.header.header--donations&attributes(attributes)
+        .header__in
+            +logo(class="header__logo logo--small")
+            +menu-main(class="header__menu")
+            +button-blue("Пожертвовать")(class="header__button-donate")
+            +button-search(class="header__button-search")
+            +button-lang(class="header__button-lang")
+            +button-nav(class="header__button-nav")
+            .header__main
+                block
+                +form-donate(class="header__form-donate")
+                .header__payment
+                    img(src="assets/img/payment-visa.png" alt="Visa")
+                    img(src="assets/img/payment-master-card.png" alt="Master Card")
+                    img(src="assets/img/payment-yandex-money.png" alt="Яндекс.Деньги")
+                    img(src="assets/img/payment-webmoney.png" alt="WebMoney")
+                    img(src="assets/img/payment-sberbank.png" alt="Сбербанк")
+
+
+mixin header-blago()
+    header.header.header--blago&attributes(attributes)
+        .header__bg
+            .header__bg-1
+            .header__bg-2(style="background-image: url(assets/img/header-blagovestie-bg.jpg);")
+        .header__in
+            +logo(class="header__logo logo--small")
+            +menu-main(class="header__menu")
+            +button-blue("Пожертвовать")(class="header__button-donate")
+            +button-search(class="header__button-search")
+            +button-lang(class="header__button-lang")
+            +button-nav(class="header__button-nav")
+            .header__main
+                h1.header__title Благовестие
+                p.header__subtitle Мы Благовествуем Всем!
+
+mixin header-home()
+    header.header.header--home&attributes(attributes)
+        +slider-header(class="header__slider")
+
+        .header__in
+            +logo(class="header__logo")
+            +menu-main(class="header__menu")
+            +button-blue("Пожертвовать")(class="header__button-donate")
+            +button-search(class="header__button-search")
+            +button-lang(class="header__button-lang")
+            +button-nav(class="header__button-nav")
+            +social(class="header__social")
+
+
+
+mixin header-extra()
+    +side-left()
+    +side-right()
+    +m-box-about()
+    +m-box-join()
+    +m-box-help()
+    +m-box-media()

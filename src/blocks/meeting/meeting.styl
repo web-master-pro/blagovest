@@ -1,0 +1,42 @@
+.meeting
+    width 100%
+    background #4b372e url(img/meeting-bg.jpg) no-repeat center center
+    background-size cover
+
+    &__in
+        container(1210px)
+        padding 40px 20px 40px
+        +above(1152px)
+            padding 90px 20px 100px
+
+    &__title
+        color white
+        font(Bold)
+        font-size 30px
+        line-height 35px
+        text-align center
+        margin 0 0 15px
+        +above(1152px)
+            font-size 42px
+            line-height 1
+            margin 0 0 30px
+
+    &__subtitle
+        color white
+        font()
+        font-size 16px
+        line-height 20px
+        text-align center
+        margin 0 0 20px
+        +above(1152px)
+            font-size 18px
+            line-height 30px
+            margin 0 0 40px
+        +below(1151px)
+            br
+                display none
+
+    &__form
+        padding 0
+
+

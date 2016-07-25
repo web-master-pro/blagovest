@@ -1,0 +1,25 @@
+include ../button-slider/button-slider
+
+mixin slider-photo()
+    .slider-photo&attributes(attributes)
+        .slider-photo__slides
+            .slider-photo__slide(style="background-image: url(assets/img/slider-photo/slider-photo-1.jpg);")
+            .slider-photo__slide(style="background-image: url(assets/img/slider-photo/slider-photo-2.jpg);")
+            .slider-photo__slide(style="background-image: url(assets/img/slider-photo/slider-photo-3.jpg);")
+        .slider-photo__sidebar
+            +button-slider-prev(class="slider-photo__prev button-slider--photo")
+            +button-slider-next(class="slider-photo__next button-slider--photo")
+            .slider-photo__counter 1 / 1
+
+mixin slider-photo-pastor()
+    .slider-photo&attributes(attributes)
+        .slider-photo__slides
+            .slider-photo__slide(style="background-image: url(assets/img/slider-photo/slider-photo-4.jpg);")
+            .slider-photo__slide(style="background-image: url(assets/img/slider-photo/slider-photo-1.jpg);")
+            .slider-photo__slide(style="background-image: url(assets/img/slider-photo/slider-photo-2.jpg);")
+            .slider-photo__slide(style="background-image: url(assets/img/slider-photo/slider-photo-3.jpg);")
+        .slider-photo__sidebar
+            +button-slider-prev(class="slider-photo__prev button-slider--photo")
+            +button-slider-next(class="slider-photo__next button-slider--photo")
+            .slider-photo__counter 1 / 1
+

@@ -1,0 +1,6 @@
+mixin form-subscribe()
+    form(action="#" method="POST").form-subscribe&attributes(attributes)#form-subscribe
+        h3.form-subscribe__title Подпишитесь на интересные новости!
+        input(type="email" name="email" placeholder="Ваш email" required).form-subscribe__input
+        button(type="submit").form-subscribe__button Ок
+

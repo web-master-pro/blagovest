@@ -1,0 +1,35 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/meeting/meeting
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Консультации")
+
+    body.page.page-consultations
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-consultations-bg.jpg);")
+                h1.header__title Консультации
+                p.header__subtitle Вы всегда можете встретиться с кем-нибудь из служителей <br>церкви или пасторов для консультации и общения!
+            main.main
+                .main__in
+                    .block-two
+                        .block-two__row
+                            .block-two__img-part
+                                img(src="assets/img/photo-2.jpg" alt="").image-framed
+                            .block-two__text-part
+                                .block-two__vertical-center
+                                    h2.intro Также в нашей церкви есть команда консультантов — людей, прошедших специальные курсы- психологов по различным направлениям, имеющих опыт служения людям.
+                                    p Консультанты помогают сделать самостоятельный выбор — так, чтобы человек сам научился находить решение проблемы в духе христианских ценностей.
+            +meeting-personal(id="meeting")
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

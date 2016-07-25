@@ -1,0 +1,13 @@
+include ../button-slider/button-slider
+
+mixin slider-report()
+    .slider-report&attributes(attributes)
+        .slider-report__slider
+            img(src="assets/img/reportage/reportage-1.jpg" alt="").slider-report__slide
+            img(src="assets/img/reportage/reportage-2.jpg" alt="").slider-report__slide
+            img(src="assets/img/reportage/reportage-3.jpg" alt="").slider-report__slide
+            img(src="assets/img/reportage/reportage-4.jpg" alt="").slider-report__slide
+            img(src="assets/img/reportage/reportage-5.jpg" alt="").slider-report__slide
+        .slider-report__nav
+            +button-slider-prev(class="slider-report__prev button-slider--report")
+            +button-slider-next(class="slider-report__next button-slider--report")

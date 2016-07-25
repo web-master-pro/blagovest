@@ -1,0 +1,55 @@
+include ../form-meeting/form-meeting
+
+mixin meeting()
+    section.meeting&attributes(attributes)
+        .meeting__in
+            h2.meeting__title Хочу встретиться со служителем
+            p.meeting__subtitle Мы запишем вас на встречу, на которой Вы сможете поговорить на самые разные темы.
+            +form-meeting(class="meeting__form")
+
+mixin meeting-help()
+    section.meeting&attributes(attributes)
+        .meeting__in
+            h2.meeting__title Нужна помощь?
+            p.meeting__subtitle Оставьте заявку и мы поможем вам и вашим близким!
+            +form-meeting(class="meeting__form")
+
+mixin meeting-join()
+    section.meeting&attributes(attributes)
+        .meeting__in
+            h2.meeting__title Присоединяйтесь к служениям!
+            +form-meeting(class="meeting__form")
+
+mixin meeting-charity()
+    section.meeting&attributes(attributes)
+        .meeting__in
+            h2.meeting__title Хочу помогать!
+            p.meeting__subtitle Помогайте людям вместе с нашими дружественными благотворительными фондами.
+            +form-meeting(class="meeting__form")
+
+mixin meeting-personal()
+    section.meeting&attributes(attributes)
+        .meeting__in
+            h2.meeting__title Запишитесь на личную встречу со служителем!
+            p.meeting__subtitle Вы можете договориться о встрече с консультантом, и мы верим, что решение придет в вашу ситуацию.
+            +form-meeting(class="meeting__form")
+
+mixin meeting-event()
+    section.meeting&attributes(attributes)
+        .meeting__in
+            h2.meeting__title Хочу посетить мероприятие!
+            p.meeting__subtitle Мы позвоним и запишем Вас на нужное мероприятие или событие, которые вы хотите посетить.
+            +form-meeting(class="meeting__form")
+
+mixin meeting-join-church()
+    section.meeting&attributes(attributes)
+        .meeting__in
+            h2.meeting__title Присоединяйтесь к нашей церкви
+            +form-meeting(class="meeting__form")
+
+mixin meeting-prayer()
+    section.meeting&attributes(attributes)
+        .meeting__in
+            h2.meeting__title Оставьте молитвенную просьбу
+            p.meeting__subtitle Если у Вас есть молитвенная просьба, вопрос, или Вы хотите поделиться с другими людьми свидетельством <br>или благодарением, оставьте заявку.
+            +form-meeting(class="meeting__form")

@@ -1,0 +1,101 @@
+.slider-events
+    padding 0
+
+    &__nav
+        width 100%
+        background-color white
+        margin 0 0 30px
+        +above(1152px)
+            margin-bottom 70px
+
+    &__nav-in
+        container(1210px)
+        padding 0 20px
+        height 60px
+        display flex
+        flex-flow row nowrap
+        justify-content space-between
+        +above(1152px)
+            height 140px
+
+    &__prev
+        flex 1 1 400px
+        display flex
+        flex-flow row nowrap
+        justify-content flex-start
+        align-items center
+        position relative
+
+    &__current
+        flex 1 0 200px
+        border-left 1px solid #f4f4f4
+        border-right 1px solid #f4f4f4
+        display flex
+        flex-flow row nowrap
+        justify-content center
+        align-items center
+        +above(1152px)
+            flex 0 0 370px
+
+    &__next
+        flex 1 1 400px
+        display flex
+        flex-flow row nowrap
+        justify-content flex-end
+        align-items center
+        text-align right
+        position relative
+
+    &__date
+        color #231f20
+        font()
+        font-size 18px
+        line-height 40px
+        +above(1152px)
+            color #231f20
+            font(Light)
+            font-size 24px
+            line-height 40px
+
+    &__slider
+        container(1210px)
+        padding 0 20px
+        margin-bottom 20px
+        +above(1152px)
+            margin-bottom 100px
+
+    &__slide
+        display flex
+        flex-flow row wrap
+        justify-content space-around
+
+.event
+    flex 0 1 370px
+    display block
+    background-color #fff
+    margin 0 0 20px
+
+    &__photo
+        display block
+        width 100%
+        height auto
+        margin 0
+
+    &__time
+        display block
+        color #faa926
+        font(Bold)
+        font-size 20px
+        line-height 25px
+        padding-left 20px
+        margin 20px 0 10px
+
+    &__text
+        color #231f20
+        font()
+        font-size 16px
+        line-height 25px
+        padding-left 20px
+        margin 0 0 20px
+
+

@@ -1,0 +1,7 @@
+mixin form-donate()
+    form.form-donate&attributes(attributes)
+        .input.form-donate__input
+            input(type="number" name="summa" placeholder="Введите сумму пожертвования" required).input__input
+        button(type="submit").button-submit.form-donate__button
+            span Внести
+

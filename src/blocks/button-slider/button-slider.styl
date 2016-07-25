@@ -1,0 +1,37 @@
+.button-slider
+    display block
+    width 46px
+    height 46px
+    border 2px solid white
+    border-radius 50%
+    background none
+    outline none
+    color transparent
+    font-size 0
+    text-decoration none
+    text-align center
+    transition all .3s ease
+    background-position 50% 50%
+    background-repeat no-repeat
+    background-size 20px 20px
+    cursor pointer
+    &--prev
+        background-image embedurl("../../svg/arrow-prev-white.svg", "")
+        &:hover
+            transform translateX(-2px)
+    &--next
+        background-image embedurl("../../svg/arrow-next-white.svg", "")
+        &:hover
+            transform translateX(2px)
+    &--report
+        +above(1152px)
+            border none
+
+    +above(1152px)
+        width 70px
+        height 70px
+        background-size 30px 30px
+        &--photo
+            border-color rgba(255,255,255,.05)
+            &:hover
+                border-color #fff

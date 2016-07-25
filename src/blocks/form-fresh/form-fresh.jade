@@ -1,0 +1,21 @@
+mixin form-fresh-1()
+    form(action="#" method="POST").form-fresh#form-fresh-1
+        h4.form-fresh__title Хочу принять крещение
+        .input.form-fresh__input
+            input(type="text" name="name" placeholder="Ваше имя" required).input__input
+        .input.form-fresh__input
+            input(type="tel" name="phone" placeholder="Номер телефона" required).input__input.input__input--phone
+        button(type="submit").button-submit.button-submit--wide.form-fresh__button
+            span Отправить заявку
+        p.form-fresh__text Мы верим, что крещение нужно принимать по вере, в осознанном возрасте, исповедуя Иисуса Христа Господом и Спасителем.
+    
+mixin form-fresh-2()
+    form(action="#" method="POST").form-fresh#form-fresh-2
+        h4.form-fresh__title Запишитесь на семинар и посетите <br>его в самое ближайшее время
+        .input.form-fresh__input
+            input(type="text" name="name" placeholder="Ваше имя" required).input__input
+        .input.form-fresh__input
+            input(type="tel" name="phone" placeholder="Номер телефона" required).input__input.input__input--phone
+        button(type="submit").button-submit.button-submit--wide.form-fresh__button
+            span Отправить заявку
+

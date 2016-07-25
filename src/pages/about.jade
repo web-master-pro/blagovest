@@ -1,0 +1,84 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/meeting/meeting
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Кто мы?")
+
+    body.page.page-about
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-about-bg.jpg);")
+                h1.header__title Кто мы?
+                p.header__subtitle Церковь «Миссия «Благая Весть» входит в состав Российского <br>объединенного Союза христиан веры евангельской (РОСХВЕ), <br>в котором более 1500 церквей.
+            main.main
+                .main__in
+                    p.center Начальствующий епископ РОСХВЕ - Сергей Васильевич Ряховский, член Общественной палаты РФ, <br>член Совета по взаимодействию с религиозными объединениями при Президенте РФ.
+                    h2.title.title--center Мы несём благую весть!
+                    .block-two
+                        .block-two__row
+                            .block-two__img-part
+                                img(src="assets/img/photo-3.jpg" alt="").image-framed.image-framed--white
+                            .block-two__text-part
+                                .block-two__vertical-center
+                                    h3.intro.intro--bold Мы мечтаем и всё делаем для того, чтобы наша церковь была ответом для всех, кто ищет мир, радость, общение с Богом и людьми.
+                                    p Наша церковь - это большая семья! Мы любим друг друга, радуемся вместе и живем в согласии, в нашей церкви каждый человек может найти поддержку, принятие, помощь и прощение.
+
+                    h2.title.title--center Мы любим всех и заботимся о каждом!
+                    .ceremonies
+                        figure.ceremony
+                            .ceremony__pic(style="background-image: url(assets/img/ceremonies/ceremony-1.jpg);")
+                            figcaption.ceremony__caption
+                                h3.ceremony__title
+                                    span
+                                        a(href="#").ceremony__link Дети
+                                p.ceremony__text Молодежь церкви каждое воскресенье собирается вместе, чтобы увидеть друг друга и услышать вдохновляющее слово, для них также организованы ток-шоу, кафе, общение и активный досуг, направленные на созидание счастливых браков.
+                        figure.ceremony
+                            .ceremony__pic(style="background-image: url(assets/img/ceremonies/ceremony-2.jpg);")
+                            figcaption.ceremony__caption
+                                h3.ceremony__title
+                                    span
+                                        a(href="#").ceremony__link Подростки
+                                p.ceremony__text Молодежь церкви каждое воскресенье собирается вместе, чтобы увидеть друг друга и услышать вдохновляющее слово, для них также организованы ток-шоу, кафе, общение и активный досуг, направленные на созидание счастливых браков.
+                        figure.ceremony
+                            .ceremony__pic(style="background-image: url(assets/img/ceremonies/ceremony-3.jpg);")
+                            figcaption.ceremony__caption
+                                h3.ceremony__title
+                                    span
+                                        a(href="#").ceremony__link Молодежь
+                                p.ceremony__text Молодежь церкви каждое воскресенье собирается вместе, чтобы увидеть друг друга и услышать вдохновляющее слово, для них также организованы ток-шоу, кафе, общение и активный досуг, направленные на созидание счастливых браков.
+
+                        figure.ceremony
+                            .ceremony__pic(style="background-image: url(assets/img/ceremonies/ceremony-4.jpg);")
+                            figcaption.ceremony__caption
+                                h3.ceremony__title
+                                    span
+                                        a(href="#").ceremony__link Почтенный возраст
+                                p.ceremony__text Молодежь церкви каждое воскресенье собирается вместе, чтобы увидеть друг друга и услышать вдохновляющее слово, для них также организованы ток-шоу, кафе, общение и активный досуг, направленные на созидание счастливых браков.
+                        figure.ceremony
+                            .ceremony__pic(style="background-image: url(assets/img/ceremonies/ceremony-5.jpg);")
+                            figcaption.ceremony__caption
+                                h3.ceremony__title
+                                    span
+                                        a(href="#").ceremony__link Семья
+                                p.ceremony__text Молодежь церкви каждое воскресенье собирается вместе, чтобы увидеть друг друга и услышать вдохновляющее слово, для них также организованы ток-шоу, кафе, общение и активный досуг, направленные на созидание счастливых браков.
+
+                        figure.ceremony
+                            .ceremony__pic(style="background-image: url(assets/img/ceremonies/ceremony-6.jpg);")
+                            figcaption.ceremony__caption
+                                h3.ceremony__title
+                                    span
+                                        a(href="#").ceremony__link Офис и администрирование
+                                p.ceremony__text Молодежь церкви каждое воскресенье собирается вместе, чтобы увидеть друг друга и услышать вдохновляющее слово, для них также организованы ток-шоу, кафе, общение и активный досуг, направленные на созидание счастливых браков.
+            +meeting(id="meeting")
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

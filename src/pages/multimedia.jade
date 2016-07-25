@@ -1,0 +1,31 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/choose-category/choose-category
+include ../blocks/filter-media/filter-media
+include ../blocks/media/media
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Медиафайлы")
+
+    body.page.page-multimedia
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-multimedia-bg.jpg);")
+                h1.header__title Медиафайлы
+                p.header__subtitle Самые важные события, которые очень заметно влияют <br>на жизнь нашей церкви и всех прихожан. Будьте всегда <br>в курсе самого интересного!
+            main.main
+                +choose-category()
+                +filter-media()
+                +media-list()
+
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

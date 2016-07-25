@@ -1,0 +1,105 @@
+.slider-photo
+    display block
+    width 100%
+    max-width 770px
+    height 360px
+    position relative
+    margin-left auto
+    margin-right auto
+    padding 0
+    +above(480px)
+        height 520px
+    +above(1152px)
+        max-width 1170px
+        margin-left auto
+        margin-right auto
+
+    &__sidebar
+        display block
+        background-color rgba(35,31,32,.8)
+        position absolute
+        width 100%
+        height 85px
+        top auto
+        bottom 0
+        right 0
+        left 0
+        z-index 100
+        +above(1152px)
+            background-color rgba(35,31,32,1)
+            width 200px
+            height auto
+            left auto
+            right 0
+            top 0
+            bottom 0
+
+    &__counter
+        width 150px
+        color white
+        font()
+        font-size 24px
+        line-height 1
+        text-align center
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%,-50%)
+        right auto
+        margin 0 auto
+
+    &__next
+        position absolute
+        top 50%
+        margin-top -23px
+        right 20px
+        z-index 150px
+        +above(1152px)
+            top 70px
+            left 50%
+            right auto
+            margin-top 0
+            margin-left -35px
+
+    &__prev
+        position absolute
+        top 50%
+        margin-top -23px
+        left 20px
+        z-index 150px
+        +above(1152px)
+            top auto
+            bottom 70px
+            left 50%
+            margin-top 0
+            margin-left -35px
+
+
+    &__slides
+        display block
+        background-color #231f20
+        width 100%
+        position absolute
+        top 0
+        bottom 0
+        right 0
+        left 0
+        +above(1152px)
+            width 770px
+            left auto
+            right 200px
+            top 0
+            bottom 0
+
+    &__slide
+        display block
+        width 100%
+        height 360px
+        background-repeat no-repeat
+        background-size cover
+        background-position center center
+        +above(480px)
+            height 520px
+
+
+

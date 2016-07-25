@@ -1,0 +1,20 @@
+include ../button-slider/button-slider
+
+mixin slider-header()
+    .slider-header&attributes(attributes)
+        .slider-header__slider
+            .slider-header__slide(style="background-image: url(assets/img/home-header/slide-1.jpg);")
+                .slider-header__in
+                    h2.slider-header__title Никогда счастье не ставило человека на такую высоту, <br>чтобы он не нуждался в друге
+                    +button-orange("Узнать больше")(class="slider-home__button")
+            .slider-header__slide(style="background-image: url(assets/img/home-header/slide-2.jpg);")
+                .slider-header__in
+                    h2.slider-header__title Миссия Благая Весть - это одна большая церковь, <br>включающая в себя несколько филиалов в Санкт-Петербурге <br>и Ленинградской области.
+                    +button-orange("Узнать больше")(class="slider-home__button")
+            .slider-header__slide(style="background-image: url(assets/img/home-header/slide-3.jpg);")
+                .slider-header__in
+                    h2.slider-header__title Человек широкой души, любящий Господа и людей. <br>Отзывчивый и всегда хочет помочь.
+                    +button-orange("Узнать больше")(class="slider-home__button")
+        .slider-header__nav
+            +button-slider-prev(class="slider-header__prev")
+            +button-slider-next(class="slider-header__next")

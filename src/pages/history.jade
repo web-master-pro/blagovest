@@ -1,0 +1,105 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/logos/logos
+include ../blocks/button-more/button-more
+include ../blocks/history-video/history-video
+include ../blocks/slider-history/slider-history
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("История церкви")
+
+    body.page.page-history
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-history-bg.jpg);")
+                h1.header__title История церкви
+                p.header__subtitle Церковь «Миссия Благая Весть» своими корнями уходит <br>к первоапостольской церкви, когда после воскресения Иисуса Христа <br>первые апостолы стали проповедовать Благую Весть в Иерусалиме, <br>Самарии, а также по всем городам Римской империи.
+            main.main
+                .main__in.main__in--no-padding
+                    .divider
+                    h2.title.title--history 1890
+                    .block-vision
+                        .block-vision__row
+                            .block-vision__col
+                                img(src="assets/img/history/history-1.jpg" alt="").image-framed.image-framed--white
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold Евангельское движение
+                                    p В конце 19 века в России началось евангельское движение, в распространении которого принимали участие В.А. Пашков, граф И.М. Корф, княгиня Н.Ф. Ливен, княгиня В.Ф. Гагарина, И.С. Проханов, И.В. Каргель. В их домах и начали проводить служения евангельские верующие.
+                    .divider
+                    h2.title.title--history 1916
+                    .block-vision
+                        .block-vision__row.block-vision__row--reverse
+                            .block-vision__col
+                                img(src="assets/img/history/history-2.jpg" alt="").image-framed.image-framed--white
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold Основание церкви евангельских христиан
+                                    p 10 апреля 1916 года возобновилось водное крещение во Имя Господа Иисуса Христа, как крестили апостолы в первой церкви. Эту дату принято считать датой основания церкви евангельских христиан в духе апостолов.
+                    .divider
+
+                +slider-history()
+
+                .main__in.main__in--no-padding
+
+                    .divider
+                    h2.title.title--history 1979
+                    .block-vision
+                        .block-vision__row
+                            .block-vision__col
+                                img(src="assets/img/history/history-3.jpg" alt="").image-framed.image-framed--white
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold Приобретение здания под церковь
+                                    p В 1979 году община приобретает дом в поселке Парголово и перестраивает его под здание церкви. С перестройкой молодежь церкви начинает активно заниматься распространением Благой Вести, проповедуя в местах лишения свободы и у Казанского Собора. Церковь ЕХДА расширяет свое название, добавляя к прежнему «Миссия Благая Весть»
+
+                    .divider
+
+                +history-video(class="page-history__video")
+                
+                .main__in.main__in--no-padding.hide-mobile
+                    
+                    .divider
+                    h2.title.title--history 1991
+                    .block-vision
+                        .block-vision__row
+                            .block-vision__col
+                                img(src="assets/img/history/history-4.jpg" alt="").image-framed.image-framed--white
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold Развитие церкви 
+                                    p В 1991 году Администрация города для строительства церкви передает фундамент кинотеатра «Русь», за который община рассчитывается медикаментами и медицинским оборудованием. В это время открывается канал «ОТВ» и начинается вещание христианских программ, начинают развиваться Линия Доверия и другие служения церкви.
+
+
+                    .divider
+                    h2.title.title--history 2011
+                    .block-vision
+                        .block-vision__row.block-vision__row--reverse
+                            .block-vision__col
+                                img(src="assets/img/history/history-5.jpg" alt="").image-framed.image-framed--white
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold Открытие благотворительных организаций при содействии церкви
+                                    p В 2011 году основным местом собрания церкви «Миссия Благая Весть» становится концертный зал  «Колизей». В это время при содействии церкви открываются различные благотворительные организации для социальной работы в обществе: «Яркая Жизнь», «Я ЕСТЬ», «Дар в будущее», «Равновесие», «Ответ» и другие.
+
+                    .divider
+                    .page-history__plans
+                        h2.title.title--history Наши планы
+                        p.center Мы мечтаем построить большое церковное здание с залом для богослужений <br>не менее чем на пять тысяч человек, с помещениями для психологической и молитвенной <br>помощи, с центром для детей, подростков и молодежи, а также зоной для отдыха, <br>развлечений и спортивных мероприятий и хотим, чтобы это служило всем сторонам <br>личности человека: эмоциональной, физической и социальной.
+
+                .page-history__button-wrapper
+                    +button-more("Узнать, что было дальше")(class="page-history__button js-history-button")
+
+                +logos()
+ 
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

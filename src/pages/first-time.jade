@@ -1,0 +1,38 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/map/map
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Я здесь впервые")
+
+    body.page.page-first-time
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-first-time-bg.jpg);")
+                h1.header__title Я здесь впервые
+                p.header__subtitle Миссия Благая Весть - это одна большая церковь, <br>включающая в себя несколько филиалов в Санкт-Петербурге <br>и Ленинградской области.
+            main.main
+                .main__in
+                    .main__narrow
+                        p Богослужения во всех филиалах проходят по воскресеньям с единой проповедью старшего пастора.
+ 
+                        p Все филиалы отличаются друг от друга, но в каждом из них есть возможность познакомиться с новыми людьми, стать частью малой группы и начать возрастать в вере.
+                         
+                        p Церковь — это такое место, где каждый человек может найти поддержку, принятие, помощь и прощение. Это большая семья, где мы любим друг друга, радуемся и живем в согласии.
+
+                        h2.title Как нас найти?
+
+                        p Наша церковь встречается каждое воскресенье! Мы будем рады встрече с Вами, Вашей семьей и друзьями уже в это воскресенье в 9:45, 12:00 или 15:00.
+                +map()
+
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

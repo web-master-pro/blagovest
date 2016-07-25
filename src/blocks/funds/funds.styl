@@ -1,0 +1,118 @@
+.funds
+    margin-top 40px
+    +above(1152px)
+        margin-top 75px
+    &__button-wrapper
+        text-align center
+        margin-top 30px
+
+.fund
+    display block
+    width 100%
+    background-color white
+    margin 0 0 25px
+    padding-top 100px
+    background-repeat no-repeat
+    transition all .3s ease
+    +below(1151px)
+        &:nth-child(n+4)
+            display none
+    &:hover
+        box-shadow 0 1px 35px rgba(2, 2, 2, 0.1)
+    &--1
+        background-image url(img/funds/fund-1.png)
+        background-size 130px 35px
+        background-position 50% 32px
+        +above(992px)
+            background-size auto
+            background-position 80px 50%
+    &--2
+        background-image url(img/funds/fund-2.png)
+        background-size 64px 56px
+        background-position 50% 24px
+        +above(992px)
+            background-size auto
+            background-position 105px 50%
+    &--3
+        background-image url(img/funds/fund-3.png)
+        background-size 176px 40px
+        background-position 50% 33px
+        +above(992px)
+            background-size auto
+            background-position 62px 50%
+    &--4
+        background-image url(img/funds/fund-4.png)
+        background-size 64px 60px
+        background-position 50% 24px
+        +above(992px)
+            background-size auto
+            background-position 114px 50%
+    &--5
+        background-image url(img/funds/fund-5.png)
+        background-size 103px 50px
+        background-position 50% 24px
+        +above(992px)
+            background-size auto
+            background-position 70px 50%
+    &--6
+        background-image url(img/funds/fund-6.png)
+        background-size 125px 60px
+        background-position 50% 24px
+        +above(992px)
+            background-size auto
+            background-position 84px 50%
+
+    +above(992px)
+        padding-top 0
+        height 280px
+        margin-bottom 20px
+
+    &__info
+        border-top 1px solid #f4f4f4
+        padding 25px 20px 10px
+        +above(992px)
+            height 280px
+            margin-left 375px
+            padding 40px 30px 20px 70px
+            border-left 1px solid #f4f4f4
+            border-top none
+
+
+    &__title
+        color #231f20
+        font(Bold)
+        font-size 20px
+        line-height 25px
+        margin 0 0 10px
+        +above(1152px)
+            font-size 24px
+            line-height 35px
+            margin-bottom 15px
+
+    &__link
+        display block
+        color #faa926
+        font(Bold)
+        font-size 18px
+        line-height 30px
+        margin 0 0 15px
+
+    &__descr
+        color #231f20
+        font()
+        font-size 15px
+        font-weight 400
+        line-height 25px
+        margin 0 0 15px
+        display none
+        +above(1152px)
+            display block
+    &__lists
+        display none
+        +above(1152px)
+            display block
+            & .list-text
+                display inline-block
+                vertical-align top
+                max-width 280px
+                margin-right 20px

@@ -1,0 +1,143 @@
+include ../logo/logo
+include ../social/social
+include ../form-subscribe/form-subscribe
+include ../phone/phone
+include ../phone/phone
+include ../email/email
+include ../button-white/button-white
+
+mixin footer()
+    footer.footer&attributes(attributes)
+        .footer__top
+            .footer__top-in
+                +social(class="footer__social social--pale")
+                +logo(class="footer__logo")
+                +form-subscribe(class="footer__subscribe")
+        nav.footer__main
+            .footer__col
+                .menu-footer
+                    h3.menu-footer__title О нас
+                    ul.menu-footer__menu
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Кто мы
+                            ul.menu-footer-sub
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link История
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Во что мы верим
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Наше видение
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Наш пастор
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Новое начало с богом
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Я здесь впервые
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Истории
+                .menu-footer
+                    h3.menu-footer__title Контакты
+                    ul.menu-footer__menu
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Филиалы
+                            ul.menu-footer-sub
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Колизей
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Гостиница СПБ
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Серебристый
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Балканы
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Ленинградская обл.
+                
+            .footer__col
+                .menu-footer
+                    h3.menu-footer__title Присоединиться
+                    ul.menu-footer__menu
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Малые группы
+                            ul.menu-footer-sub
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Найти группу
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Начать свою группу
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Готов принимать в свою группу
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Служения
+                            ul.menu-footer-sub
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Обзор служений
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Творчество
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Служение «Обновление»
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Календарь событий
+                            ul.menu-footer-sub
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Обзор событий
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Семинары «ШАГ»
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Крещение
+                +phone(class="footer__phone")
+            .footer__col
+                .menu-footer
+                    h3.menu-footer__title Помощь
+                    ul.menu-footer__menu
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Благотворительные фонды
+                            ul.menu-footer-sub
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Яркая жизнь
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Я ЕСТЬ
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link ОТВЕТ
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Дар в будущее
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Академия радости
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Консультации
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Молитва
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Линия Доверия
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Реабилитационные центры
+                +email(class="footer__email")
+            .footer__col
+                .menu-footer
+                    h3.menu-footer__title Медиа
+                    ul.menu-footer__menu
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Проповеди
+                            ul.menu-footer-sub
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Трансляция
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Текущий цикл
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Архив циклов
+                        li.menu-footer__item
+                            a(href="#").menu-footer__link Видео
+                            ul.menu-footer-sub
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Все видео
+                                 li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Архиы трансляций
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Видео для малых групп
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Православение
+                                li.menu-footer-sub__item
+                                    a(href="#").menu-footer-sub__link Передачи «Благословление»
+                +button-white("Пожертвовать")(class="footer__button")
+
+        .footer__bottom
+            p.footer__copyright &copy; 1990 - 2016, религиозная организация Евангельских Христиан в Духе Апостолов «Миссия Благая Весть». <br>Свидетельство о государственной регистрации №169-Р от 28.09.1999 г.
+            p.footer__developed Разработка и поддержка — <a href="http://broccolidev.ru/" title="Студия Broccoli - Разработка и поддержка порталов и сервисов" target="_blank">BRO</a>

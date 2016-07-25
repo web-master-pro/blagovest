@@ -1,0 +1,58 @@
+.under-construction
+    display block
+    min-height 100vh
+    background-color #1a4382
+    background-image url(img/header-under-construction-bg.png), linear-gradient(115deg, #387fc0 0%, #1f4388 100%)
+    background-repeat no-repeat
+    background-position center center
+    background-size cover
+    background-attachment fixed
+    &__in
+        container(1120px)
+        padding 15px 10px
+        +above(1152px)
+            padding 100px 20px 20px
+
+    &__logo
+        margin 0 auto 100px
+        position relative
+        +above(1152px)
+            margin-bottom 140px
+
+    &__title
+        color white
+        font(Extra)
+        font-size 36px
+        line-height 45px
+        text-align center
+        margin 0 auto 80px
+        max-width 700px
+        br
+            display none
+        +above(480px)
+            br
+                display inline
+        +above(1152px)
+            max-width 100%
+            font-size 64px
+            line-height 70px
+            margin-bottom 150px
+
+    &__text
+        color #769bd7
+        font()
+        font-size 14px
+        line-height 20px
+        text-align center
+        +above(1152px)
+            font-size 15px
+            line-height 25px
+
+        a
+            color white
+            transition color .3s ease
+            text-decoration none
+            &:hover
+                color $color_hover
+                text-decoration none
+

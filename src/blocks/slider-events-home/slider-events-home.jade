@@ -1,0 +1,42 @@
+include ../button-slider/button-slider
+include ../loader/loader
+
+mixin slider-events-home()
+    .slider-events-home&attributes(attributes)
+        .slider-events-home__slider
+            
+            .slider-events-home__slide(style="background-image: url(assets/img/home-events/slide-1.jpg);" data-theme="Первые шаги с Иисусом исповедь первая" data-date="15 мая")
+                .slider-events-home__captions
+                    h3.slider-events-home__caption Первые шаги с Иисусом: <br>«Исповедь первая — путь пророка»
+                    time(datetime="2016-05-15 17:00").slider-events-home__time 15 мая, 17:00
+                    address.slider-events-home__address Невский проспект, д.100, Церковь «Миссия&nbsp;«Благая&nbsp;Весть»
+            
+            .slider-events-home__slide(style="background-image: url(assets/img/home-events/slide-2.jpg);" data-theme="Вечер хвалы и поклонения с главным пастором" data-date="23 мая")
+                .slider-events-home__captions
+                    h3.slider-events-home__caption Вечер хвалы и поклонения с главным пастором
+                    time(datetime="2016-05-23 19:00").slider-events-home__time 23 мая, 19:00
+                    address.slider-events-home__address Невский проспект, д.100, Церковь «Миссия&nbsp;«Благая&nbsp;Весть»
+            
+            .slider-events-home__slide(style="background-image: url(assets/img/home-events/slide-3.jpg);" data-theme="Общецерковный вечер" data-date="10 июня")
+                .slider-events-home__captions
+                    h3.slider-events-home__caption Общецерковный вечер
+                    time(datetime="2016-06-10 10:00").slider-events-home__time 10 июня, 10:00
+                    address.slider-events-home__address Невский проспект, д.100, Церковь «Миссия&nbsp;«Благая&nbsp;Весть»
+
+        .slider-events-home__in
+            +button-slider-prev(class="slider-events-home__prev")
+            +button-slider-next(class="slider-events-home__next")
+            .slider-events-home__extra
+                .slider-events-home__event
+                    p.slider-events-home__event-date
+                    p.slider-events-home__event-theme
+                    +loader(class="slider-events-home__event-loader-1")
+                .slider-events-home__event
+                    p.slider-events-home__event-date
+                    p.slider-events-home__event-theme
+                    +loader(class="slider-events-home__event-loader-2")
+                .slider-events-home__event
+                    p.slider-events-home__event-date
+                    p.slider-events-home__event-theme
+                    +loader(class="slider-events-home__event-loader-3")
+            .slider-events-home__nav

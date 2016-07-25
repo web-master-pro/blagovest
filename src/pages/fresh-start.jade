@@ -1,0 +1,28 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+include ../blocks/fresh/fresh
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Новое начало с Богом")
+
+    body.page.page-fresh-start
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-fresh-start-bg.jpg);")
+                h1.header__title Новое начало с Богом
+                p.header__subtitle Бог любит каждого человека! И каждый человек бесценен для Него! <br>Признавая свои грехи и отдавая свое сердце Богу, мы обретаем <br>спасение в Вечности, а также утешение и помощь здесь, на земле.
+            main.main
+                .main__in
+                    p.center Когда мы с верой обращаемся к Иисусу о прощении грехов и спасении души, то получаем спасение, как подарок, которое впоследствии сохраняется не усилиями христианина, а благодаря Божьей благодати, которая обеспечивает нам надежду и безопасность.
+
+                +fresh()
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

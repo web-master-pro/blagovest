@@ -1,0 +1,96 @@
+.page
+    &--grey
+    &--gray
+        background-color #f4f4f4
+
+    &
+    &__container
+        transition all .3s ease
+        &.fixed
+            top 0
+            left 0
+            right 0
+            position fixed
+
+    &__overlay
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        z-index 500
+        background-color transparent
+        transition all .3s ease
+        .fixed &
+            background-color rgba(35,31,32,.7)
+
+.page-about
+.page-blagovestie
+.page-ceremonies
+.page-ceremonies-page
+.page-charity-funds
+.page-small-groups
+.page-we-believe
+.page-our-vision
+.page-first-time
+.page-contacts
+.page-our-pastor
+.page-fresh-start
+.page-events
+.page-content
+.page-history
+.page-multimedia
+.page-home
+    background-color #f4f4f4
+
+
+.page-small-groups
+    .main img
+        margin-bottom 20px
+        +above(1152px)
+            margin-left 60px
+            margin-bottom 40px
+    .form-group
+        margin-bottom 50px
+        +above(1152px)
+            margin-bottom 100px
+
+.page-our-vision
+    .intro
+        margin-bottom 15px
+
+.page-content
+    &__photo
+        display block
+        max-width 100%
+        height auto
+        margin 80px auto 90px
+    &__table
+        margin 0 auto 20px
+        +above(1152px)
+            margin 110px auto
+    &__block-two
+        margin 30px 0
+        +above(1152px)
+            margin 80px 0 100px
+
+.page-history
+    &__plans
+        padding-bottom 10px
+        +above(1152px)
+            padding-bottom 95px
+        +below(1151px)
+            br
+                display none
+
+    &__button-wrapper
+        padding-top 30px
+        padding-bottom 30px
+        text-align center
+
+.page-home
+    .block-vision
+        +below(767px)
+            margin-bottom -40px
+
+

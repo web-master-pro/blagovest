@@ -1,0 +1,36 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/meeting/meeting
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Молитвенное служение")
+
+    body.page.page-prayer
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-prayer-bg.jpg);")
+                h1.header__title Молитвенное служение
+                p.header__subtitle Мы с радостью ответим на Ваш вопрос, а молитвенная группа <br>и другие члены церкви поддержат Вас в молитвах.
+            main.main
+                .main__in
+                    .block-two
+                        .block-two__row
+                            .block-two__img-part
+                                img(src="assets/img/photo-1.jpg" alt="").image-framed
+                            .block-two__text-part
+                                .block-two__vertical-center
+                                    h2.intro Как церковь, мы призваны молиться и помогать друг другу.
+                                    p Если у Вас есть молитвенная просьба, вопрос, или Вы хотите поделиться с другими людьми свидетельством или благодарением, оставьте заявку, или позвоните в офис церкви и мы с радостью ответим на Ваш вопрос, а молитвенная группа и другие члены церкви поддержат Вас в молитвах.
+
+            +meeting-prayer(id="meeting")
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

@@ -1,0 +1,76 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/meeting/meeting
+include ../blocks/button-more/button-more
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Почтенный возраст")
+
+    body.page.page-ceremonies-page
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-ceremonies-page-bg.jpg);")
+                h1.header__title Почтенный возраст
+                p.header__subtitle Мы очень признательны людям почтенного возраста, любим их, <br>уважаем и оказываем им особую честь.
+            main.main
+                .main__in
+                    .main__narrow
+                        p Нередко люди почтенного возраста считают себя старыми. Но это не совсем так. Если человек чувствует себя молодым, у него еще много жизненных сил и энергии, говорить о том, что наступает старость еще рано.
+
+                        p Мы очень признательны людям почтенного возраста, любим их, уважаем и оказываем им особую честь. Для старшего поколения организованы праздники и специальные служения, где люди обретают внутреннюю силу и молодость, а также недостающие общение и заботу.
+
+                        p С детства я спешила повзрослеть: «Ой, как нескоро ещё мне будет пятнадцать лет!», «Да когда ещё будет двадцать пять!» И всё же мне казалось, что и 15, и 25 лет – это уже очень много. Казалось, что жизнь вот-вот кончится. Теперь скажу – это была моя самая большая ошибка! Махнув рукой на свою жизнь – всё равно ведь скоро кончится – я пропустила столько возможностей чему-то научиться, совершила столько необдуманных и непоправимых поступков!
+
+                        p С тридцати лет я начала говорить, что мне четвёртый десяток. Я не понимала женщин, скрывающих свой возраст. Зачем? Ведь это только плюс, если выглядишь моложе своих лет, а притворяться девочкой в зрелом возрасте как-то неприлично.
+
+                .block-lines
+                    .block-lines__in
+                        .block-lines__line
+                            h3.block-lines__caption Руководитель
+                            img(src="assets/img/pastor.jpg" alt="Дмитрий Шатров").block-lines__photo
+                            p.block-lines__text Дмитрий Шатров
+                        .block-lines__line
+                            h3.block-lines__caption Телефон
+                            a(href="tel:88005555550").block-lines__phone 8-800-555-555-0
+                        .block-lines__line
+                            h3.block-lines__caption Адрес
+                            address.block-lines__address Санкт-Петербург, Невский&nbsp;проспект, КЗ&nbsp;«Колизей», д.&nbsp;134, стр.&nbsp;1
+                +meeting-join(id="meeting")
+            
+                .main__in
+                    h2.title.title--center.title--no-top Возможно вас заинтересуют другие служения
+                    .ceremonies
+                        figure.ceremony
+                            .ceremony__pic(style="background-image: url(assets/img/ceremonies/ceremony-4.jpg);")
+                            figcaption.ceremony__caption
+                                h3.ceremony__title
+                                    span
+                                        a(href="#").ceremony__link Почтенный возраст
+                                p.ceremony__text Молодежь церкви каждое воскресенье собирается вместе, чтобы увидеть друг друга и услышать вдохновляющее слово, для них также организованы ток-шоу, кафе, общение и активный досуг, направленные на созидание счастливых браков.
+                        figure.ceremony
+                            .ceremony__pic(style="background-image: url(assets/img/ceremonies/ceremony-1.jpg);")
+                            figcaption.ceremony__caption
+                                h3.ceremony__title
+                                    span
+                                        a(href="#").ceremony__link Дети
+                                p.ceremony__text Молодежь церкви каждое воскресенье собирается вместе, чтобы увидеть друг друга и услышать вдохновляющее слово, для них также организованы ток-шоу, кафе, общение и активный досуг, направленные на созидание счастливых браков.
+                        figure.ceremony
+                            .ceremony__pic(style="background-image: url(assets/img/ceremonies/ceremony-2.jpg);")
+                            figcaption.ceremony__caption
+                                h3.ceremony__title
+                                    span
+                                        a(href="#").ceremony__link Подростки
+                                p.ceremony__text Молодежь церкви каждое воскресенье собирается вместе, чтобы увидеть друг друга и услышать вдохновляющее слово, для них также организованы ток-шоу, кафе, общение и активный досуг, направленные на созидание счастливых браков.
+                    .center
+                        +button-more("Посмотреть все служения")(href="ceremonies.html")
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

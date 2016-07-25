@@ -1,0 +1,78 @@
+.block-vision
+    width 100%
+    max-width 1000px
+    margin-left auto
+    margin-right auto
+    .page-history &
+    .page-home &
+        max-width 100%
+
+    &__row
+        width 100%
+        display flex
+        flex-flow row wrap
+        margin-bottom 0
+        +above(768px)
+            justify-content space-between
+            margin-bottom 100px
+            &:last-child
+                margin-bottom 0
+        &--reverse
+            flex-direction row-reverse
+    &__col
+        flex 0 0 100%
+        max-width 100%
+        margin-bottom 20px
+        +above(768px)
+            display flex
+            flex-flow row nowrap
+            justify-content flex-start
+            flex 0 0 50%
+            max-width 50%
+            padding 0
+            margin-bottom 0
+            ^[0]__row--reverse &
+                justify-content flex-end
+            .page-history &
+                padding 0 30px
+            &:nth-child(1)
+                padding-right 30px
+                padding-left 0
+                align-self center
+                ^[0]__row--reverse &
+                    padding-left 30px
+                    padding-right 0
+            &:nth-child(2)
+                padding-left 30px
+                padding-right 0
+                ^[0]__row--reverse &
+                    padding-right 30px
+                    padding-left 0
+        img
+            display block
+            max-width 100%
+            height auto
+            align-self center
+            +below(767px)
+                margin-left auto
+                margin-right auto
+                max-width 100%
+        &--video
+            align-self center
+
+
+    &__text
+        align-self center
+        text-align center
+        +above(768px)
+            padding-top 20px
+            text-align left
+            .page-home &
+                padding-left 40px
+                padding-right 0
+            .page-home ^[0]__row--reverse &
+                padding-right 40px
+                padding-left 0
+
+
+

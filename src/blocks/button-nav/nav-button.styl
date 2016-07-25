@@ -1,0 +1,51 @@
+.button-nav
+    display block
+    border none
+    border-radius none
+    background transparent
+    padding 0
+    width 30px
+    height 29px
+    cursor pointer
+    outline none
+    +above(1152px)
+        display none
+
+    &__in::before
+    &__in::after
+        content ""
+        position absolute
+        left 0
+
+    &__in::before
+        top -8px
+        transform-origin left top
+
+    &__in::after
+        top 8px
+        transform-origin left bottom
+
+    &__in
+        position relative
+        display block
+
+    &__in
+    &__in:after
+    &__in:before
+        width 100%
+        height 3px
+        background-color #fff
+        backface-visibility hidden
+        border-radius 1px
+        transition background-color .3s linear, transform 70ms linear
+        .no-touch ^[0]:hover &
+            background-color $color_hover
+
+.button-nav.on .button-nav__in
+    background-color transparent !important
+
+.button-nav.on .button-nav__in:before
+    transform rotate(45deg) translate(5px, -8px)
+
+.button-nav.on .button-nav__in:after
+    transform rotate(-45deg) translate(5px, 8px)

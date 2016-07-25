@@ -1,0 +1,28 @@
+mixin menu-branch()
+    .menu-branch&attributes(attributes)
+        button.menu-branch__button
+            span.menu-branch__caption Выбрать другой <span class="menu-branch__caption-ext">филиал</span>
+        ul.menu-branch__menu
+            li.menu-branch__item
+                a(href="#").menu-branch__link Санкт-Петербург
+            li.menu-branch__item
+                a(href="#").menu-branch__link Москва
+            li.menu-branch__item
+                a(href="#").menu-branch__link Екатеринбург
+            li.menu-branch__item
+                a(href="#").menu-branch__link Омск
+
+//- mixin menu-branch-with-img()
+//-     .menu-branch&attributes(attributes)
+//-         button.menu-branch__button
+//-             span.menu-branch__caption Выбрать другой <span class="menu-branch__caption-ext">филиал</span>
+//-         ul.menu-branch__menu
+//-             li.menu-branch__item
+//-                 a(href="#").menu-branch__link Санкт-Петербург
+//-             li.menu-branch__item
+//-                 a(href="#").menu-branch__link Москва
+//-             li.menu-branch__item
+//-                 a(href="#").menu-branch__link Екатеринбург
+//-             li.menu-branch__item
+//-                 a(href="#").menu-branch__link Омск
+//-         img(src="assets/img/branch-1.jpg" alt="Санкт-Питербург").menu-branch__img

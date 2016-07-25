@@ -1,0 +1,154 @@
+include ../button-more/button-more
+
+mixin media-list()
+    .media-list&attributes(attributes)
+        .media
+            .media__video
+                .video.video--cover
+                    .video__poster(style="background-image: url(assets/img/media/video-1.jpg);")
+                    video(preload="none" controls).video__video
+                        source(src="http://www.mbv.spb.ru/download/video2/video/mbv/mbv20160710-n463.mp4" type="video/mp4")
+            .media__headers
+                h3.media__title Как избежать многих страданий
+                time(datetime="2016-05-15 17:00").media__time 15 мая, 17:00
+            .media__authors
+                .media-author
+                    img(src="assets/img/pastor-1.jpg" alt="").media-author__photo
+                    h4.media-author__name Дмитрий Шатров
+                    p.media-author__position Старший пастор церкви
+
+            ul.media-links.media__links
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link mp3
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link avi
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link txt
+        .media
+            .media__video
+                .video.video--cover
+                    .video__poster(style="background-image: url(assets/img/media/video-2.jpg);")
+                    video(preload="none" controls).video__video
+                        source(src="http://www.mbv.spb.ru/download/video2/video/mbv/mbv20160710-n463.mp4" type="video/mp4")
+            .media__headers
+                h3.media__title Сила женщины – красота её, которая внутри!
+                time(datetime="2016-05-15 17:00").media__time 15 мая, 17:00
+            .media__authors
+                .media-author
+                    img(src="assets/img/pastor-3.jpg" alt="").media-author__photo
+                    h4.media-author__name Александр Холеменко
+                    p.media-author__position Пастор филиала "Вефиль"
+
+            ul.media-links.media__links
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link mp3
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link avi
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link txt
+        .media
+            .media__video
+                .video.video--cover
+                    .video__poster(style="background-image: url(assets/img/media/video-3.jpg);")
+                    video(preload="none" controls).video__video
+                        source(src="http://www.mbv.spb.ru/download/video2/video/mbv/mbv20160710-n463.mp4" type="video/mp4")
+            .media__headers
+                h3.media__title Благодать в повседневной жизни
+                time(datetime="2016-05-15 17:00").media__time 15 мая, 17:00
+            .media__authors
+                .media-author
+                    img(src="assets/img/pastor-2.jpg" alt="").media-author__photo
+                    h4.media-author__name Евгений Пастушевский
+                    p.media-author__position Пастор церкви
+                .media-author
+                    img(src="assets/img/pastor-1.jpg" alt="").media-author__photo
+                    h4.media-author__name Дмитрий Шатров
+                    p.media-author__position Старший пастор церкви
+
+            ul.media-links.media__links
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link mp3
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link avi
+                li.media-links__item txt
+        .media
+            .media__video
+                .video.video--cover
+                    .video__poster(style="background-image: url(assets/img/media/video-4.jpg);")
+                    video(preload="none" controls).video__video
+                        source(src="http://www.mbv.spb.ru/download/video2/video/mbv/mbv20160710-n463.mp4" type="video/mp4")
+            .media__headers
+                h3.media__title Иллюзорная реальность или реализованная мечта
+                time(datetime="2016-05-15 17:00").media__time 15 мая, 17:00
+            .media__authors
+                .media-author
+                    img(src="assets/img/pastor-4.jpg" alt="").media-author__photo
+                    h4.media-author__name Виктор Хохленков
+                    p.media-author__position Пастор церкви
+
+            ul.media-links.media__links
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link
+                li.media-links__item mp3
+                li.media-links__item avi
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link txt
+
+        .media.hide-mobile.hide-desktop
+            .media__video
+                .video.video--cover
+                    .video__poster(style="background-image: url(assets/img/media/video-1.jpg);")
+                    video(preload="none" controls).video__video
+                        source(src="http://www.mbv.spb.ru/download/video2/video/mbv/mbv20160710-n463.mp4" type="video/mp4")
+            .media__headers
+                h3.media__title Как избежать многих страданий
+                time(datetime="2016-05-15 17:00").media__time 15 мая, 17:00
+            .media__authors
+                .media-author
+                    img(src="assets/img/pastor-1.jpg" alt="").media-author__photo
+                    h4.media-author__name Дмитрий Шатров
+                    p.media-author__position Старший пастор церкви
+
+            ul.media-links.media__links
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link mp3
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link avi
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link txt
+        .media.hide-mobile.hide-desktop
+            .media__video
+                .video.video--cover
+                    .video__poster(style="background-image: url(assets/img/media/video-2.jpg);")
+                    video(preload="none" controls).video__video
+                        source(src="http://www.mbv.spb.ru/download/video2/video/mbv/mbv20160710-n463.mp4" type="video/mp4")
+            .media__headers
+                h3.media__title Сила женщины – красота её, которая внутри!
+                time(datetime="2016-05-15 17:00").media__time 15 мая, 17:00
+            .media__authors
+                .media-author
+                    img(src="assets/img/pastor-3.jpg" alt="").media-author__photo
+                    h4.media-author__name Александр Холеменко
+                    p.media-author__position Пастор филиала "Вефиль"
+
+            ul.media-links.media__links
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link mp3
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link avi
+                li.media-links__item
+                    a(href="#" target="_blank").media-links__link txt
+
+        .media-list__button-wrapper
+            +button-more("Больше материалов")(class="media-list__button js-media-button")
+

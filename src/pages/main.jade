@@ -1,0 +1,56 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/meeting/meeting
+include ../blocks/stories/stories
+include ../blocks/slider-events-home/slider-events-home
+include ../blocks/tiles/tiles
+
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Миссия Благая Весть")
+
+    body.page.page-home
+        .page__container
+            +header-home(id="header")
+            main.main
+                .main__in
+                    h2.title.title--no-top.center Прямая трансляция
+                    .block-vision
+                        .block-vision__row
+                            .block-vision__col.block-vision__col--video
+                                .video.video--framed-white
+                                    .video__poster(style="background-image: url(assets/img/home-video-1.jpg);")
+                                    video(width="530" height="321" preload="none" controls).video__video
+                                        source(src="http://www.mbv.spb.ru/download/video2/video/mbv/mbv20160710-n463.mp4" type="video/mp4")
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold «У Иисуса есть план получше!»
+                                    p Старший пастор церкви «Миссия "Благая весть» Даниил Шатров рассказывает о церкви, Благословлении, и планах на будущее.
+                +tiles()
+                +slider-events-home()
+                +stories-home()
+                .main__in
+                    h2.title.title--no-top.center Событие недели
+                    .block-vision
+                        .block-vision__row.block-vision__row--reverse
+                            .block-vision__col.block-vision__col--video
+                                .video.video--framed-white
+                                    .video__poster(style="background-image: url(assets/img/home-video-2.jpg);")
+                                    video(width="530" height="321" preload="none" controls).video__video
+                                        source(src="http://www.mbv.spb.ru/download/video2/video/mbv/mbv20160710-n463.mp4" type="video/mp4")
+                            .block-vision__col
+                                .block-vision__text
+                                    h3.intro.intro--bold Интервью и встреча прихожан с новым старшим пастором церкви «Миссия Благая Весть» Максимом Важенским
+                                    p Ведущий Дмитрий Ефимов познакомит Вас в этом ролике с новостями текущей недели и расскажет про встречу с новым старшим пастором нашей церкви.
+            +meeting-join-church(id="meeting")
+            +footer(id="footer")
+        +header-extra()
+        +scripts()

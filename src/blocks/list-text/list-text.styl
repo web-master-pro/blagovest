@@ -1,0 +1,41 @@
+.list-text
+    display block
+    width 100%
+    list-style none
+    padding 0
+    margin 0
+
+    &__item
+        display block
+        color #231f20
+        font()
+        font-size 16px
+        line-height 25px
+        padding 0 0 0 50px
+        margin 0 0 15px
+        position relative
+        &::before
+            content ""
+            display block
+            width 30px
+            height 2px
+            background-color #faa926
+            position absolute
+            top 10px
+            left 0
+        +above(1152px)
+            font-size 18px
+            line-height 30px
+            padding 0 0 0 60px
+            margin 0 0 20px
+            &::before
+                top 13px
+        ^[0]--small &
+            +above(1152px)
+                font-size 15px
+                line-height 18px
+                padding-left 30px
+                margin 0 0 10px
+                &::before
+                    width 15px
+                    top 6px

@@ -1,0 +1,249 @@
+.header
+    width 100%
+    background-color #231f20
+    background-repeat no-repeat
+    background-position center center
+    background-size cover
+    position relative
+    .page-404 &
+        background-color #231f20
+        +above(1152px)
+            min-height 750px
+    &--blago
+        +above(1152px)
+            min-height 560px
+    &--home
+        min-height 540px
+        +above(1152px)
+            min-height 740px
+
+    &__in
+        container(1210px)
+        padding 110px 20px 40px
+        z-index 700
+        +above(1152px)
+            padding 175px 20px 40px
+            min-height 560px
+            .page-404 &
+                padding-top 245px
+        ^[0]--blago &
+            min-height 400px
+            text-align center
+            padding-top 90px
+            +above(768px)
+                min-height 550px
+            +above(1152px)
+                min-height 560px
+                text-align left
+                padding-top 185px
+        ^[0]--home &
+            min-height 200px
+            +above(1152px)
+                min-height 200px
+
+    &__logo
+        position absolute
+        top 15px
+        left 50%
+        margin-left -74px
+        +above(1152px)
+            top 35px
+            left 20px
+            margin 0
+            ^[0]--home &
+                top 65px
+
+    &__button-nav
+        position absolute
+        top 31px
+        left 20px
+
+    &__menu
+        position absolute
+        top 65px
+        right 420px
+        z-index 2000
+        ^[0]--home &
+            right auto
+            left 340px
+            top 150px
+
+    &__button-donate
+        position absolute
+        top 50px
+        right 220px
+        +below(1151px)
+            display none
+        ^[0]--home &
+            top 140px
+            right 20px
+
+    &__social
+        position absolute
+        top 75px
+        right 20px
+        +below(1151px)
+            display none
+
+    &__button-search
+        position absolute
+        top 36px
+        right 20px
+        +above(1152px)
+            top 60px
+            right 100px
+            ^[0]--home &
+                right auto
+                left 360px
+                top 72px
+
+    &__button-lang
+        position absolute
+        top 60px
+        right 20px
+        ^[0]--home &
+            top 72px
+            left 440px
+
+    &__main
+        text-align center
+        ^[0]--blago &
+            padding-top 40px
+            display inline-block
+            max-width 250px
+            background-image embedurl("../../svg/fakel.svg", "")
+            background-size 89px 136px
+            background-position center top
+            background-repeat no-repeat
+            min-height 136px
+            +above(1152px)
+                max-width 380px
+                min-height 290px
+                background-size 189px 290px
+                padding-top 100px
+
+    &__title
+        color white
+        font(Extra)
+        font-size 36px
+        font-weight 700
+        line-height 45px
+        text-align center
+        margin 0 0 26px
+        +above(1152px)
+            font-size 64px
+            line-height 1
+            margin 0 0 40px
+        +below(767px)
+            br
+                display none
+        ^[0]--blago &
+            color white
+            font(Bold)
+            font-size 30px
+            letter-spacing .025em
+            line-height 1
+            text-transform uppercase
+            margin 0 0 20px
+            +above(1152px)
+                font-size 48px
+                margin 0 0 32px
+
+    &__subtitle
+        color white
+        font(Light)
+        font-size 18px
+        line-height 25px
+        text-align center
+        margin 0 auto
+        +above(1152px)
+            font-size 30px
+            line-height 45px
+        +below(767px)
+            br
+                display none
+        ^[0]--blago &
+            color white
+            font()
+            font-size 20px
+            line-height 1
+            margin 0
+            +above(1152px)
+                font-size 24px
+
+    &__button
+        display inline-block
+        margin 35px auto 0
+        +above(1152px)
+            margin 130px auto 0
+
+    &__bg
+        width 100%
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        display flex
+        flex-flow row wrap
+
+    &__bg-1
+        flex 0 0 100%
+        background-color #1977bd
+        background-image linear-gradient(135deg, #1ebfeb 0%, #1977bd 100%)
+        min-height 250px
+        +above(1152px)
+            flex 1 1 40%
+        +above(1400px)
+            flex 1 1 45%
+    &__bg-2
+        flex 0 0 100%
+        background-repeat no-repeat
+        background-position center top
+        background-size cover
+        background-image url(img/header-blagovestie-bg.jpg)
+        min-height 150px
+        +above(768px)
+            min-height 300px
+        +above(1152px)
+            flex 1 1 60%
+        +above(1400px)
+            flex 1 1 55%
+
+    &__form-donate
+        margin 35px auto 35px
+        +above(1152px)
+            margin 130px auto 52px
+
+    &__payment
+        display block
+        width 100%
+        text-align center
+        font-size 0
+        margin-bottom 0
+        +above(1152px)
+            margin-bottom 90px
+
+        img
+            display inline-block
+            vertical-align middle
+            max-width 105px
+            height auto
+            margin 0 5px 20px
+            &:nth-child(1)
+            &:nth-child(2)
+                max-width 40px
+            +above(1152px)
+                margin 0 24px 30px
+                &
+                &:nth-child(1)
+                &:nth-child(2)
+                    max-width 100%
+
+    &__slider
+        width 100%
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0

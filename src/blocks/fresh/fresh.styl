@@ -1,0 +1,125 @@
+.fresh
+    container(1210px)
+    display flex
+    flex-flow row wrap
+    justify-content space-around
+    margin-bottom 30px
+    margin-top -20px
+    +above(1152px)
+        justify-content space-between
+        padding 0 20px
+        margin-top -30px
+        margin-bottom 70px
+
+.fresh-box
+    flex 0 1 470px
+    background-color #fff
+    padding 20px
+    position relative
+    +below(470px)
+        border-bottom 1px solid #f4f4f4
+        &:last-child
+            border-bottom none
+    +above(470px)
+        margin-bottom 2%
+    +above(1152px)
+        padding 50px 70px 20px
+        flex 0 0 100%
+        max-width 100%
+        &:nth-child(-n+2)
+            flex 0 0 49%
+            max-width 49%
+        &::before
+            content ""
+            background-size cover
+            background-repeat no-repeat
+            background-position center center
+            opacity .15
+            position absolute
+            top 0
+            left 0
+            right 0
+            bottom 0
+            z-index 2
+        &:nth-child(1)
+            &::before
+                background-image url(img/fresh-start/fresh-start-1.jpg)
+        &:nth-child(2)
+            &::before
+                background-image url(img/fresh-start/fresh-start-2.jpg)
+        &:nth-child(3)
+            &::before
+                background-image url(img/fresh-start/fresh-start-3.jpg)
+
+    &__in
+        position relative
+        z-index 20
+
+    &__step
+        color #faa926
+        font(PTSans)
+        font-size 15px
+        line-height 20px
+        text-align center
+        margin 0 0 10px
+        +above(1152px)
+            margin-bottom 15px
+
+    &__title
+        color #231f20
+        font(Extra)
+        font-size 30px
+        line-height 35px
+        text-align center
+        margin 0 0 15px
+        +above(1152px)
+            font-size 42px
+            line-height 55px
+            margin-bottom 20px
+    &__photo
+        display block
+        max-width 100%
+        height auto
+        margin 0 auto 20px
+        +above(1152px)
+            display none
+
+    &__text
+        color #231f20
+        font()
+        font-size 16px
+        line-height 25px
+        margin 0 0 20px
+        +above(1152px)
+            font-size 18px
+            line-height 30px
+            margin-bottom 25px
+
+    &__strong
+        color #231f20
+        font(Bold)
+        font-size 20px
+        line-height 25px
+        margin 0 0 20px
+        +above(1152px)
+            font-size 24px
+            line-height 35px
+            margin-bottom 25px
+
+    &__row
+        display flex
+        flex-flow row wrap
+        justify-content center
+        +above(1152px)
+            flex-flow row nowrap
+            justify-content space-between
+
+    &__left
+        flex 0 0 100%
+        +above(1152px)
+            flex 0 1 520px
+    &__right
+        flex 0 0 100%
+        +above(1152px)
+            flex 0 0 430px
+

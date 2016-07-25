@@ -1,0 +1,9 @@
+include ../menu-category/menu-category
+
+mixin choose-category()
+    .choose-category&attributes(attributes)
+        .choose-category__in
+            p.choose-category__number 56 видеороликов
+            h2.choose-branch__title Воскресные богослужения
+            +menu-category(class="choose-category__menu")
+

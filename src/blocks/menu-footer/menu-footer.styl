@@ -1,0 +1,59 @@
+.menu-footer
+    &:nth-child(2)
+        margin-top 60px
+    &__title
+        color white
+        font(Bold)
+        font-size 24px
+        line-height 35px
+        margin 0 0 35px
+
+    &__menu
+        list-style none
+        padding 0
+        margin 0
+
+    &__item
+        color rgba(255,255,255,.25)
+        font(Extra)
+        font-size 15px
+        letter-spacing .025em
+        line-height 20px
+        padding 0
+        margin 0 0 21px
+        ^[0]:nth-child(2) &
+            margin-bottom 0
+
+    &__link
+        color rgba(255,255,255,.25)
+        text-decoration none
+        text-transform uppercase
+        transition color .3s ease
+        &:hover
+            color $color_hover
+            text-decoration none
+
+
+.menu-footer-sub
+    list-style none
+    padding 14px 0
+    margin 0
+    .menu-footer:nth-child(2) &
+        padding-bottom 0
+
+    &__item
+        color white
+        font()
+        font-size 15px
+        font-weight 400
+        line-height 25px
+        padding 15px 0 0
+        margin 0
+
+    &__link
+        color white
+        text-decoration none
+        transition color .3s ease
+        &:hover
+            color $color_hover
+            text-decoration none

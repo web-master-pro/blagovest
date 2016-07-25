@@ -1,0 +1,81 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/meeting/meeting
+include ../blocks/button-more/button-more
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Благотворительные фонды")
+
+    body.page.page-charity-funds
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-charity-funds-bg.jpg);")
+                h1.header__title Благо&shy;твори&shy;тельные фонды
+                p.header__subtitle Любая церковь призвана к тому, чтобы отвечать на нужды людей, <br>находящимся в разных жизненных ситуациях и помогать <br>им преодолевать трудности. Мы хотим, чтобы каждый человек <br>чувствовал заботу и Божью любовь через наши дела!
+            main.main
+                .main__in
+                    .main__narrow
+                        p Понимая, что жизнь в городе зависит не только от административных структур, но и от каждого из нас, в 2014 году было создано Благотворительное сообщество «Живущий город», куда вошло несколько благотворительных фондов и некоммерческих организаций Санкт-Петербурга, открытых на базе церкви «Миссия Благая Весть»
+
+                    .funds
+                        .fund.fund--1
+                            .fund__info
+                                h3.fund__title Благотворительный фонд «яркая жизнь»
+                                a(href="http://www.brightlifefund.ru" target="blank").fund__link www.brightlifefund.ru
+                                p.fund__descr Оказывает помощь детям-сиротам, детям с тяжелыми заболеваниями и одиноким пожилым людям.
+
+                        .fund.fund--2
+                            .fund__info
+                                h3.fund__title Межрегиональная общественная организация содействия детям, подросткам и молодежи «РАВНОВЕСИЕ»
+                                a(href="http://www.ravnovesie.org" target="blank").fund__link www.ravnovesie.org
+                                .fund__lists
+                                    ul.list-text.list-text--small
+                                        li.list-text__item Театральная мастерская
+                                        li.list-text__item Детские и подростковые лагеря
+                                    ul.list-text.list-text--small
+                                        li.list-text__item Подростковые клубы в детских домах
+                                        li.list-text__item Социальная квартира для выпускников детских домов
+
+                        .fund.fund--3
+                            .fund__info
+                                h3.fund__title Санкт-Петербургский общественный благотворительный фонд «Я ЕСТЬ»
+                                a(href="http://www.fond-iam.com" target="blank").fund__link www.fond-iam.com
+                                .fund__lists
+                                    ul.list-text.list-text--small
+                                        li.list-text__item Благотворительная работа:
+                                        li.list-text__item Многодетные семьи, люди с ОВЗ, больницы и социальные дома
+                                    ul.list-text.list-text--small
+                                        li.list-text__item Помощь личности в самореализации
+                                        li.list-text__item Развитие гражданского общества в СПб
+
+                        .fund.fund--4.hide-mobile
+                            .fund__info
+                                h3.fund__title Автономная некоммерческая организация центр социально-правовой помощи «ОТВЕТ»
+                                a(href="http://www.otvetcentre.org" target="blank").fund__link www.otvetcentre.org
+                                p.fund__descr Работа с детьми-сиротами, бездомными и малоимущими. Постоянное посещение Сиверского детского дома и осуществление поддержки и сопровождения выпускников детских домов.
+
+                        .fund.fund--5.hide-mobile
+                            .fund__info
+                                h3.fund__title Автономная некоммерческая организация Центр социальной помощи и содействия в разрешении проблем социальный незащищенных граждан «Дар в будущее»
+                                a(href="http://www.дарвбудущее.рф" target="blank").fund__link www.дарвбудущее.рф
+
+                        .fund.fund--6.hide-mobile
+                            .fund__info
+                                h3.fund__title Санкт-Петербургская автономная некоммерческая организация Центр развития семьи и личности «Академия радости»
+                                p.fund__descr Развитие творческого, личностного и социального потенциала человека. <br>Развивающие программы для детей и взрослых, творческие и досуговые мероприятия.
+
+                        .funds__button-wrapper
+                            +button-more("Больше фондов")(class="funds__button js-funds-button")
+
+            +meeting-charity(id="meeting")
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

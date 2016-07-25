@@ -1,0 +1,45 @@
+.baloon
+    display block
+    width 100%
+    max-width 810px
+    padding 20px 20px 10px
+    +above(1152px)
+        max-width 570px
+        background-color white
+        padding 70px 70px 30px
+
+    &__caption
+        color #848484
+        font(PTSans)
+        font-size 15px
+        font-style italic
+        line-height 20px
+        margin 0 0 8px
+
+    &__text
+        color #231f20
+        font()
+        font-size 16px
+        font-style normal
+        line-height 20px
+        margin 0 0 17px
+        +above(1152px)
+            font-size 18px
+            line-height 25px
+            margin-bottom 25px
+
+    &__phone
+        color #231f20
+        text-decoration none
+        &:hover
+            color @color
+            text-decoration none
+
+    &__top
+        cf()
+
+    &__img
+        float left
+        margin-top -3px
+        margin-right 20px
+

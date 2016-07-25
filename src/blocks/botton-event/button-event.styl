@@ -1,0 +1,118 @@
+.button-event
+    dipslay block
+    width 20px
+    height 20px
+    background transparent
+    border none
+    outline none
+    padding 0
+    position relative
+    cursor pointer
+    +above(1152px)
+        width auto
+        height auto
+    &--prev
+        text-align left
+        +above(1152px)
+            padding-left 100px
+    &--next
+        text-align right
+        +above(1152px)
+            padding-right 100px
+
+    &__caption
+        display block
+        color #231f20
+        font(Extra)
+        font-size 15px
+        letter-spacing .025em
+        line-height 20px
+        text-transform uppercase
+        margin 0 0 10px
+        transition color .3s ease
+        +below(1151px)
+            display none
+        ^[0]:hover &
+            color #faa927
+
+    &__date
+        display block
+        color #848484
+        font()
+        font-size 15px
+        line-height 20px
+        margin 0
+        +below(1151px)
+            display none
+
+    &__icon
+        display block
+        width 20px
+        height 2px
+        background-color #231f20
+        position absolute
+        top 50%
+        &::before
+        &::after
+            content ""
+            display block
+            width 9px
+            height 2px
+            background-color #231f20
+            position absolute
+        ^[0]--prev &
+            left 0
+            &::before
+                top 3px
+                left -2px
+                transform rotate(45deg)
+            &::after
+                top -3px
+                left -2px
+                transform rotate(-45deg)
+        ^[0]--next &
+            right 0
+            &::before
+                top 3px
+                right -2px
+                transform rotate(-45deg)
+            &::after
+                top -3px
+                right -2px
+                transform rotate(45deg)
+        +above(1152px)
+            width 30px
+            transition width .3s ease
+            ^[0]:hover &
+                width 50px
+            &::before
+            &::after
+                content ""
+                display block
+                width 18px
+                height 2px
+                background-color #231f20
+                position absolute
+            ^[0]--prev &
+                left 0
+                &::before
+                    top 6px
+                    left -2px
+                    transform rotate(45deg)
+                &::after
+                    top -6px
+                    left -2px
+                    transform rotate(-45deg)
+            ^[0]--next &
+                right 0
+                &::before
+                    top 6px
+                    right -2px
+                    transform rotate(-45deg)
+                &::after
+                    top -6px
+                    right -2px
+                    transform rotate(45deg)
+
+
+

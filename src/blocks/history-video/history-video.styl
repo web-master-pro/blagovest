@@ -1,0 +1,51 @@
+.history-video
+    width 100%
+    background-color #231f20
+
+    &__in
+        container(1170px)
+        padding 20px
+        display block
+        +above(768px)
+            display flex
+            flex-flow row nowrap
+            justify-content space-between
+        +above(1152px)
+            padding 60px 20px
+
+    &__left
+        display block
+        +above(768px)
+            flex 0 0 45%
+            display flex
+            flex-flow row nowrap
+            align-items center
+    &__right
+        display block
+        +above(768px)
+            flex 0 0 45%
+
+    &__title
+        color white
+        font(Extra)
+        font-size 30px
+        line-height 35px
+        margin 0 0 20px
+        +above(1152px)
+            font-size 42px
+            line-height 55px
+            margin 30px 0
+
+    &__text
+        color white
+        font()
+        font-size 16px
+        line-height 25px
+        margin 0 0 20px
+        +above(1152px)
+            font-size 18px
+            line-height 30px
+            margin-bottom 30px
+
+
+

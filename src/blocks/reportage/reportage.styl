@@ -1,0 +1,55 @@
+.reportage
+    width 100%
+    background-color #231f20
+    &__in
+        container(1210px)
+        padding 35px 20px 10px
+        display block
+        +above(1152px)
+            display flex
+            flex-flow row wrap
+            padding 65px 20px 60px
+            justify-content space-between
+            align-items flex-start
+
+    &__left
+        display block
+        max-width 570px
+        margin 0 auto 40px
+        +above(1152px)
+            flex 0 1 470px
+            display flex
+            flex-flow row nowrap
+            align-items center
+            margin 0
+            min-height 400px
+
+    &__right
+        display block
+        max-width 570px
+        margin 0 auto
+        +above(1152px)
+            flex 0 0 570px
+            margin 0
+
+    &__title
+        color white
+        font(Extra)
+        font-size 30px
+        line-height 35px
+        margin 0 0 20px
+        +above(1152px)
+            font-size 42px
+            line-height 55px
+            margin 35px 0
+
+    &__text
+        color white
+        font()
+        font-size 16px
+        line-height 25px
+        margin 0 0 20px
+        +above(1152px)
+            font-size 18px
+            line-height 30px
+            margin-bottom 30px

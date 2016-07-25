@@ -1,0 +1,41 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/form-group/form-group
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Малые группы")
+
+    body.page.page-small-groups
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-small-groups-bg.jpg);")
+                h1.header__title Малые группы
+                p.header__subtitle Человек не был сотворен Богом для одиночества. Бог сказал: <br>«Не хорошо быть человеку одному». Мы были сотворены, чтобы жить <br>в общении друг с другом.
+            main.main
+                .main__in
+                    .main__narrow
+                        ul.list-text
+                            li.list-text__item Малая группа - это несколько человек, которые собираются один раз в неделю в теплой, домашней обстановке, чтобы вместе общаться, молиться, разбирать Библию, помогать и поддерживать друг друга.
+                        img(src="assets/img/photo-1.jpg" alt="").image-framed.image-framed--white.fluid-image
+                        ul.list-text
+                            li.list-text__item На воскресном служении мы можем узнать о концепции христианской веры, а в малой группе мы можем пережить и испытать это на себе.
+                        img(src="assets/img/photo-4.jpg" alt="").image-framed.image-framed--white.fluid-image
+                        ul.list-text
+                            li.list-text__item Малая группа представляет собой место, где мы вместе изучаем Библию, молимся в слух, служим и помогаем друг другу, вместе принимаем участие в благотворительной работе наших фондов или служениях в церкви, а также поддерживаем друг друга в христианской жизни.
+                        img(src="assets/img/photo-5.jpg" alt="").image-framed.image-framed--white.fluid-image
+                        ul.list-text
+                            li.list-text__item Малая группа — это лаборатория христианской жизни, где можно практиковать свою веру, преображаясь в образ Иисуса Христа. Если сегодня вы посещаете только воскресные собрания - это уже хорошо, но сделайте следующий шаг!
+                        img(src="assets/img/photo-6.jpg" alt="").image-framed.image-framed--white.fluid-image
+                +form-group()
+
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

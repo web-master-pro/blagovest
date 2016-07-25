@@ -1,0 +1,221 @@
+.tiles
+    display block
+    width 100%
+    padding 0
+    margin 0
+    position relative
+    &__in
+        display none
+        width 100%
+        height 780px
+        max-width 1920px
+        margin-left auto
+        margin-right auto
+        padding 0
+        position relative
+        +above(1152px)
+            display block
+    &__slider
+        display block
+        width 100%
+        height 320px
+        position relative
+        +above(1152px)
+            display none
+
+        .owl-dots
+            position absolute
+            bottom 20px
+            left 0
+            right 0
+            display block
+            list-style none
+            padding 0 20px
+            margin 0
+            font-size 0
+            text-align center
+            +above(1152px)
+                display none
+        .owl-dot
+            display inline-block
+            vertical-align middle
+            width 6px
+            height 6px
+            background-color #fff
+            border-radius 50%
+            margin 15px
+            cursor pointer
+            transition background-color .3s ease
+            &:hover
+            &.active
+                background-color #f3a62d
+
+        &.owl-carousel.owl-loaded
+            +above(1152px)
+                display none !important
+
+.tile
+    display block
+    position absolute
+    &--1
+    &--2
+    &--3
+        width 22%
+        left 0
+    &--4
+    &--5
+    &--6
+        width 29%
+        left 22%
+    &--7
+    &--8
+    &--9
+        width 27%
+        left 51%
+    &--10
+    &--11
+        width 22%
+        left 78%
+
+    &--1
+        height 320px
+        top 0
+        background url(img/tiles/tile-1.jpg) no-repeat center center
+        background-size cover
+    &--2
+        height 180px
+        top 320px
+        background-color #974646
+        background-image linear-gradient(135deg, #1ebfeb 0%, #1977bd 100%)
+        .tile__in
+            background-image embedurl("../../svg/fakel.svg", "")
+            background-size 118px 180px
+            background-position center center
+            background-repeat no-repeat
+        +below(1151px)
+            position relative
+            width 100%
+            height 320px
+            top auto
+            left auto
+    &--3
+        height 280px
+        top 500px
+        background url(img/tiles/tile-3.jpg) no-repeat center center
+        background-size cover
+    &--4
+        height 180px
+        top 0
+        background-color #974646
+        background-image linear-gradient(135deg, #d2873f 0%, #845429 100%)
+        .tile__in
+            background-image embedurl("../../svg/hands.svg", "")
+            background-size 300px 211px
+            background-position center center
+            background-repeat no-repeat
+        +below(1151px)
+            position relative
+            width 100%
+            height 320px
+            top auto
+            left auto
+    &--5
+        height 320px
+        top 180px
+        background url(img/tiles/tile-5.jpg) no-repeat center center
+        background-size cover
+    &--6
+        height 280px
+        top 500px
+        background-color #974646
+        background-image linear-gradient(135deg, #ef9523 0%, #e12526 100%)
+        .tile__in
+            background-image embedurl("../../svg/heart.svg", "")
+            background-size 232px 206px
+            background-position center center
+            background-repeat no-repeat
+        +below(1151px)
+            position relative
+            width 100%
+            height 320px
+            top auto
+            left auto
+    &--7
+        height 320px
+        top 0
+        background url(img/tiles/tile-7.jpg) no-repeat center center
+        background-size cover
+    &--8
+        height 180px
+        top 320px
+        background-color #974646
+        background-image linear-gradient(135deg, #faa926 0%, #e38225 100%)
+        .tile__in
+            background-image embedurl("../../svg/communication.svg", "")
+            background-size 228px 205px
+            background-position center center
+            background-repeat no-repeat
+        +below(1151px)
+            position relative
+            width 100%
+            height 320px
+            top auto
+            left auto
+    &--9
+        height 280px
+        top 500px
+        background url(img/tiles/tile-9.jpg) no-repeat center center
+        background-size cover
+    &--10
+        height 320px
+        top 0px
+        background-color #974646
+        background-image linear-gradient(135deg, #96c93d 0%, #148642 100%)
+        .tile__in
+            background-image embedurl("../../svg/education.svg", "")
+            background-size 140px 232px
+            background-position center center
+            background-repeat no-repeat
+        +below(1151px)
+            position relative
+            width 100%
+            height 320px
+            top auto
+            left auto
+    &--11
+        height 460px
+        top 320px
+        background url(img/tiles/tile-11.jpg) no-repeat center center
+        background-size cover
+
+    &__in
+        display flex
+        flex-flow row nowrap
+        justify-content center
+        align-items center
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+
+
+
+
+    &__title
+        color white
+        font(Bold)
+        font-size 30px
+        letter-spacing .025em
+        line-height 1
+        text-transform uppercase
+        text-align center
+        margin 0 0 15px
+
+    &__subtitle
+        color white
+        font(Bold)
+        font-size 18px
+        line-height 1
+        text-align center
+        margin 0

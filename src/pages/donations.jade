@@ -1,0 +1,22 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Сделать пожертвование")
+
+    body.page.page-donations
+        .page__container
+            +header-donations(id="header" style="background-image: url(assets/img/header-donations-bg.jpg);")
+                h1.header__title Сделать пожертвование
+                p.header__subtitle «… и сеющий и жнущий вместе радоваться будут». (Иоан.4:36)
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

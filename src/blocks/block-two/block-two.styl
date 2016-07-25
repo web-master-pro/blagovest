@@ -1,0 +1,35 @@
+.block-two
+    width 100%
+    &__row
+        display block
+        width 100%
+        +above(768px)
+            display flex
+            flex-flow row nowrap
+            justify-content space-between
+
+    &__img-part
+        margin-bottom 30px
+        +above(768px)
+            max-width 50%
+            flex 0 0 auto
+            padding-right 30px
+            margin 0
+        +above(1152px)
+            padding-right 60px
+        img
+            display block
+            margin 0 auto
+
+    &__text-part
+        +above(768px)
+            flex 1 1 auto
+            display flex
+            flex-flow row nowrap
+            align-items center
+
+    &__vertical-center
+        +above(768px)
+            flex 1 1 auto
+            margin-top 20px
+

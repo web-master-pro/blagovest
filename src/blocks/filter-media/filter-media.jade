@@ -1,0 +1,30 @@
+mixin filter-media()
+    .filter-media&attributes(attributes)
+        button.filter-media__button
+            span.filter-media__button-show Показать фильтр 
+            span.filter-media__button-hide Скрыть фильтр 
+
+        .filter-media__container
+            .filter-media__select-group
+                label(for="filter-media-select-type").filter-media__label Тип
+                select(name="type").select.filter-media__select#filter-media-select-type
+                    option(value="Текущий цикл") Текущий цикл
+                    option(value="Цикл 2") Цикл 2
+                    option(value="Цикл 3") Цикл 3
+                    option(value="Цикл 4") Цикл 4
+                    option(value="Цикл 5") Цикл 5
+            .filter-media__select-group
+                label(for="filter-media-select-pastor").filter-media__label Пастор
+                select(name="pastor").select.filter-media__select#filter-media-select-pastor
+                    option(value="Дмитрий Шатров") Дмитрий Шатров
+                    option(value="Пастор 2") Пастор 2
+                    option(value="Пастор 3") Пастор 3
+                    option(value="Пастор 4") Пастор 4
+                    option(value="Пастор 5") Пастор 5
+            .filter-media__select-group
+                label(for="filter-media-select-actuality").filter-media__label Актуальность
+                select(name="actuality").select.filter-media__select#filter-media-select-actuality
+                    option(value="Самые новые") Самые новые
+                    option(value="Другие") Другие
+
+

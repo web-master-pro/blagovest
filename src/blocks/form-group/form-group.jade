@@ -1,0 +1,19 @@
+mixin form-group()
+    form(action="#" method="POST").form-group#form-group&attributes(attributes)
+        h3.form-group__title Примите решение стать частью малой группы!
+        .form-group__info
+            p.form-group__text В нашей церкви много различных малых групп и каждый человек может выбрать ту группу, которая станет для него максимально комфортной.
+
+            p.form-group__text Вы также можете открыть свою группу, пригласив своих друзей, знакомых или кого-то из церкви. Мы поможем вам стать хорошим ведущим и снабдим всем необходимым, чтобы вы не испытывали трудностей!
+        .form-group__form
+            .input.form-group__input
+                input(type="text" name="name" placeholder="Ваше имя" required).input__input
+            .input.form-group__input
+                input(type="tel" name="phone" placeholder="Номер телефона" required).input__input.input__input--phone
+            
+            select(name="group").select.form-group__select#form-group-select
+                option(value="Начать свою") Начать свою
+                option(value="Присоединиться") Присоединиться
+
+            button(type="submit").button-submit.button-submit--wide.form-group__button
+                span Вступить в группу

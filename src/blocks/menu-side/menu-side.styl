@@ -1,0 +1,94 @@
+.menu-side
+    padding 0
+
+    &__section
+        border-bottom 1px solid rgba(255,255,255,.05)
+        padding 0
+        margin 0
+        background-color #272424
+
+    &__title
+        margin 0
+
+    &__title-link
+        display block
+        width 100%
+        height 80px
+        color white
+        font(Bold)
+        font-size 24px
+        line-height 80px
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+        padding 0 40px 0 20px
+        position relative
+        margin 0
+        cursor pointer
+        text-decoration none
+        background-color #231f20
+        &:hover
+            color @color
+            text-decoration none
+        &::after
+            content ""
+            display block
+            width 13px
+            height 13px
+            border-right 2px solid #fff
+            border-bottom 2px solid #fff
+            transform rotate(45deg)
+            position absolute
+            top 30px
+            right 20px
+        &.expanded
+            background-color #272424
+            &::after
+                transform rotate(-135deg) translate(-5px,-3px)
+
+    &__menu
+        display none
+        list-style none
+        padding 0 20px
+        margin 0
+
+    &__item
+        color rgba(255,255,255,.25)
+        font(Extra)
+        font-size 15px
+        letter-spacing .025em
+        line-height 20px
+        padding 0
+        margin 0 0 21px
+
+    &__link
+        color rgba(255,255,255,.25)
+        text-decoration none
+        text-transform uppercase
+        transition color .3s ease
+        &:hover
+            color $color_hover
+            text-decoration none
+
+.menu-side-sub
+    list-style none
+    padding 14px 0 0
+    margin 0
+
+    &__item
+        color white
+        font()
+        font-size 15px
+        font-weight 400
+        line-height 25px
+        padding 15px 0 0
+        margin 0
+
+    &__link
+        color white
+        text-decoration none
+        transition color .3s ease
+        &:hover
+            color $color_hover
+            text-decoration none
+

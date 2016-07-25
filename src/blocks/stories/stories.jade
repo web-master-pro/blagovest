@@ -1,0 +1,125 @@
+include ../button-more/button-more
+
+mixin stories()
+    .stories&attributes(attributes)
+        .story
+            .story__pic(style="background-image: url(assets/img/stories/story-1.jpg)")
+            .story__caption
+                p.story__quote «Мы все находимся в путешествии, чтобы стать более похожими на Иисуса»
+                p.story__author Мария и Сергей Ригент
+                p.story__type Постояльцы
+            a(href="#").story__link
+        .story
+            .story__pic(style="background-image: url(assets/img/stories/story-2.jpg)")
+            .story__caption
+                p.story__quote «Я нашел здесь свой дом»
+                p.story__author Ярослав Шестопалов
+                p.story__type Постоялец
+            a(href="#").story__link
+        .story
+            .story__pic(style="background-image: url(assets/img/stories/story-3.jpg)")
+            .story__caption
+                p.story__quote «Любовь прощает, даже когда боль от обиды слишком велика!»
+                p.story__author Дмитрий Шатров
+                p.story__type Старший пастор церкви
+            a(href="#").story__link
+
+        .story
+            .story__pic(style="background-image: url(assets/img/stories/story-4.jpg)")
+            .story__caption
+                p.story__quote «Добро пожаловать в семью!»
+                p.story__author Мария и Сергей Ригент
+                p.story__type Постояльцы
+            a(href="#").story__link
+        .story.hide-mobile
+            .story__pic(style="background-image: url(assets/img/stories/story-5.jpg)")
+            .story__caption
+                p.story__quote «Последнее, что мне нужно»
+                p.story__author Ярослав Шестопалов
+                p.story__type Постоялец
+            a(href="#").story__link
+        .story.hide-mobile
+            .story__pic(style="background-image: url(assets/img/stories/story-6.jpg)")
+            .story__caption
+                p.story__quote «Когда мы вместе»
+                p.story__author Дмитрий Шатров
+                p.story__type Старший пастор церкви
+            a(href="#").story__link
+
+        .story.hide-mobile
+            .story__pic(style="background-image: url(assets/img/stories/story-7.jpg)")
+            .story__caption
+                p.story__quote «Мы все находимся в путешествии, чтобы стать более похожими на Иисуса»
+                p.story__author Мария и Сергей Ригент
+                p.story__type Постояльцы
+            a(href="#").story__link
+        .story.hide-mobile
+            .story__pic(style="background-image: url(assets/img/stories/story-8.jpg)")
+            .story__caption
+                p.story__quote «Я нашел здесь свой дом»
+                p.story__author Ярослав Шестопалов
+                p.story__type Постоялец
+            a(href="#").story__link
+        .story.hide-mobile
+            .story__pic(style="background-image: url(assets/img/stories/story-9.jpg)")
+            .story__caption
+                p.story__quote «Любовь прощает, даже когда боль от обиды слишком велика!»
+                p.story__author Дмитрий Шатров
+                p.story__type Старший пастор церкви
+            a(href="#").story__link
+
+        .story.hide-mobile.hide-desktop
+            .story__pic(style="background-image: url(assets/img/stories/story-1.jpg)")
+            .story__caption
+                p.story__quote «Мы все находимся в путешествии, чтобы стать более похожими на Иисуса»
+                p.story__author Мария и Сергей Ригент
+                p.story__type Постояльцы
+            a(href="#").story__link
+        .story.hide-mobile.hide-desktop
+            .story__pic(style="background-image: url(assets/img/stories/story-2.jpg)")
+            .story__caption
+                p.story__quote «Я нашел здесь свой дом»
+                p.story__author Ярослав Шестопалов
+                p.story__type Постоялец
+            a(href="#").story__link
+        .story.hide-mobile.hide-desktop
+            .story__pic(style="background-image: url(assets/img/stories/story-3.jpg)")
+            .story__caption
+                p.story__quote «Любовь прощает, даже когда боль от обиды слишком велика!»
+                p.story__author Дмитрий Шатров
+                p.story__type Старший пастор церкви
+            a(href="#").story__link
+
+        .stories__button-wrapper
+            +button-more("Больше историй")(class="stories__button js-stories-button")
+
+
+mixin stories-home()
+    section.stories-home&attributes(attributes)
+        h2.stories-home__title Истории прихожан
+        p.stories-home__text Здесь откровения многих людей, не нашедших своё жизненное предназначение, <br>но сейчас они полны жизненных сил и крепости духа!
+        .stories
+            .story
+                .story__pic(style="background-image: url(assets/img/stories/story-1.jpg)")
+                .story__caption
+                    p.story__quote «Мы все находимся в путешествии, чтобы стать более похожими на Иисуса»
+                    p.story__author Мария и Сергей Ригент
+                    p.story__type Постояльцы
+                a(href="#").story__link
+            .story
+                .story__pic(style="background-image: url(assets/img/stories/story-2.jpg)")
+                .story__caption
+                    p.story__quote «Я нашел здесь свой дом»
+                    p.story__author Ярослав Шестопалов
+                    p.story__type Постоялец
+                a(href="#").story__link
+            .story
+                .story__pic(style="background-image: url(assets/img/stories/story-3.jpg)")
+                .story__caption
+                    p.story__quote «Любовь прощает, даже когда боль от обиды слишком велика!»
+                    p.story__author Дмитрий Шатров
+                    p.story__type Старший пастор церкви
+                a(href="#").story__link
+
+        .stories-home__button-wrapper
+            +button-more("Другие истории")(class="stories-home__button")

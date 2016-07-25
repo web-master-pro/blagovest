@@ -1,0 +1,105 @@
+.side-right
+    display block
+    width 250px
+    height 100%
+    background-color #231f20
+    position fixed
+    top 0
+    bottom 0
+    right -250px
+    z-index 2500
+    transition all .3s ease
+    overflow-y auto
+    -webkit-overflow-scrolling touch
+    +above(1152px)
+        display none
+        width 100%
+        position fixed
+        top 0
+        left 0
+        right 0
+        bottom 0
+        z-index 2500
+        transition none
+    +below(1151px)
+        display block !important
+
+    &__in
+        padding 40px 30px
+        +above(1152px)
+            container(770px)
+            height 450px
+
+    &__close
+        display none
+        +above(1152px)
+            display block
+            width 23px
+            height 23px
+            background-color transparent
+            font-size 0
+            color transparent
+            border none
+            outline none
+            position absolute
+            top 75px
+            left 50%
+            margin-left -11px
+            cursor pointer
+            &::before
+            &::after
+                content ""
+                display block
+                width 29px
+                height 2px
+                border-radius 1px
+                opacity 0.2
+                background-color #f1f1f1
+                position absolute
+                top 0
+                left 0
+                transition all .3s ease
+            &::before
+                transform rotate(45deg) translate(5px,10px)
+            &::after
+                transform rotate(-45deg) translate(-10px,5px)
+            &:hover
+                &::before
+                &::after
+                    opacity 1
+
+    &__title
+        display block
+        color rgba(255,255,255,.25)
+        font()
+        font-size 14px
+        line-height 1
+        margin 0 0 10px
+        +above(1152px)
+            display none
+
+
+    &__form
+        +above(1152px)
+            position absolute
+            top 220px
+            left 50%
+            margin-left -385px
+
+    &__tip
+        display none
+        color #666061
+        font()
+        font-size 14px
+        line-height 1
+        position absolute
+        bottom 0
+        strong
+            color white
+            font(Bold)
+        &--exit
+            left 0
+        &--submit
+            right 0
+        +above(1152px)
+            display block

@@ -1,0 +1,64 @@
+.block-lines
+    width 100%
+    background-color #fff
+
+    &__in
+        container(810px)
+        padding 10px 20px
+        +above(768px)
+            padding 20px
+
+    &__line
+        display flex
+        flex-flow row wrap
+        align-items center
+        width 100%
+        border-bottom 1px solid #f4f4f4
+        padding 10px 0
+        &:last-child
+            border none
+        +above(768px)
+            padding 30px 0
+            flex-wrap nowrap
+
+    &__caption
+        flex 0 0 100%
+        color #231f20
+        font(Bold)
+        font-size 20px
+        line-height 40px
+        margin 0
+        +above(768px)
+            font-size 24px
+            flex 0 0 200px
+
+    &__text
+    &__phone
+    &__address
+        display inline-block
+        color #231f20
+        font()
+        font-size 16px
+        font-style normal
+        line-height 25px
+        margin 0
+        +above(768px)
+            font(Light)
+            font-size 24px
+            line-height 40px
+
+    &__phone
+    &__phone-link
+        color #231f20
+        text-decoration none
+        &:hover
+            color #231f20
+            text-decoration none
+
+    &__photo
+        display block
+        width 70px
+        height 70px
+        border 5px solid #f4f4f4
+        margin-right 20px
+

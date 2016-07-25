@@ -1,0 +1,34 @@
+mixin menu-category()
+    .menu-category&attributes(attributes)
+        button.menu-category__button
+            span.menu-category__caption
+                span.menu-category__default Выбрать другую категорию
+                span.menu-category__current Воскресные богослужения
+        ul.menu-category__menu
+            li.menu-category__item
+                a(href="#").menu-category__link Воскресные богослужения
+            li.menu-category__item
+                a(href="#").menu-category__link Библиотека
+            li.menu-category__item
+                a(href="#").menu-category__link Творчество пастора Михаила
+            li.menu-category__item
+                a(href="#").menu-category__link Достопримечательности
+            
+mixin menu-category-branch()
+    .menu-category&attributes(attributes)
+        button.menu-category__button
+            span.menu-category__caption
+                span.menu-category__default Выбрать другой филиал
+                span.menu-category__current Санкт-Петербург
+        ul.menu-category__menu
+            li.menu-category__item
+                a(href="#").menu-category__link Санкт-Петербург
+            li.menu-category__item
+                a(href="#").menu-category__link Москва
+            li.menu-category__item
+                a(href="#").menu-category__link Екатеринбург
+            li.menu-category__item
+                a(href="#").menu-category__link Омск
+        img(src="assets/img/branch-1.jpg" alt="Санкт-Питербург").menu-category__img
+            
+

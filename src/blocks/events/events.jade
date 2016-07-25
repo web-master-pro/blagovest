@@ -1,0 +1,9 @@
+include ../choose-branch/choose-branch
+include ../slider-events/slider-events
+
+mixin events()
+    .events&attributes(attributes)
+        .events__top
+            +choose-branch(class="events__choose-branch")
+        +slider-events()
+

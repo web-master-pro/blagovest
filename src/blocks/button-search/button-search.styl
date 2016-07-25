@@ -1,0 +1,33 @@
+.button-search
+    display block
+    width 20px
+    height 20px
+    &::before
+        content ""
+        display block
+        width 17px
+        height 17px
+        border 3px solid white
+        border-radius 50%
+        position absolute
+        top 0
+        left 0
+        transition border-color .3s ease
+    &::after
+        content ""
+        display block
+        width 3px
+        height 10px
+        border-radius 1px
+        background-color white
+        transform-origin bottom right
+        transform rotate(-45deg)
+        position absolute
+        bottom 1px
+        right 0px
+        transition background-color .3s ease
+    .no-touch &:hover
+        &::before
+            border-color $color_hover
+        &::after
+            background-color $color_hover

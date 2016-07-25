@@ -1,0 +1,28 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+
+include ../blocks/meeting/meeting
+include ../blocks/events/events
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("События церкви")
+
+    body.page.page-events
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-events-bg.jpg);")
+                h1.header__title События церкви
+                p.header__subtitle Самые важные события, которые очень заметно влияют <br>на жизнь нашей церкви и всех прихожан. Будьте всегда <br>в курсе самого интересного!
+            main.main
+                +events()
+            +meeting-event(id="meeting")
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

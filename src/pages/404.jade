@@ -1,0 +1,24 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+include ../blocks/button-orange/button-orange
+
+doctype html
+
+// Верстка сайта: http://web-master-pro.ru
+
+html(lang="ru-RU")
+
+    +head("Ошибочка вышла!")
+
+    body.page.page-404
+        .page__container
+            +header(id="header" style="background-image: url(assets/img/header-404-bg.png);")
+                h1.header__title Ошибочка вышла!
+                p.header__subtitle Запрошенная Вами страница больше не существует на сайте. <br>Попробуйте начать поиск с главной страницы.
+                +button-orange("Перейти на главную")(class="header__button button-orange--flat" href="main.html")
+            +footer(id="footer")
+        +header-extra()
+        +scripts()
+

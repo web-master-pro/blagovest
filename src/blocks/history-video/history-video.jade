@@ -1,0 +1,12 @@
+mixin history-video()
+    section.history-video&attributes(attributes)
+        .history-video__in
+            .history-video__left
+                .history-video__info
+                    h3.history-video__title История церкви
+                    p.history-video__text 30-минутный ролик об истории возникновения Церкви, как все начиналось, и как все стало тем что есть сейчас.
+            .history-video__right
+                .video.video--framed
+                    .video__poster(style="background-image: url(assets/img/history/video.jpg);")
+                    video(width="530" height="321" preload="none" controls).video__video
+                        source(src="http://www.mbv.spb.ru/download/video2/video/mbv/mbv20160710-n463.mp4" type="video/mp4")

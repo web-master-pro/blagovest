@@ -1,0 +1,17 @@
+$offset = 25
+.loader
+    &__path
+        stroke-dasharray $offset
+        stroke-dashoffset 0
+        transform-origin center
+        stroke #faa926
+        animation loader 8s linear infinite
+        transform rotate(-90deg)
+
+@keyframes loader
+    0%
+        stroke-dashoffset $offset
+
+    100%
+        stroke-dashoffset 0
+

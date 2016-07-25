@@ -1,0 +1,87 @@
+.m-box
+    display none
+    background-color rgba(255,255,255,.2)
+    background-color #fff
+    position fixed
+    width 100%
+    height 410px
+    top 50%
+    left 0
+    right 0
+    z-index 2500
+
+    &__in
+        container(1210px)
+        padding 65px 20px 20px
+        height 410px
+        display flex
+        flex-flow row nowrap
+        justify-content space-between
+
+    &__col1
+        flex 1 1 400px
+    &__col2
+        flex 0 0 200px
+        padding-top 15px
+        padding-right 20px
+    &__col3
+        flex 0 0 170px
+        padding-top 15px
+
+    &__title
+        color #231f20
+        font(Extra)
+        font-size 30px
+        line-height 1
+        margin 0 0 20px
+
+    &__text
+        max-width 310px
+        color #231f20
+        font()
+        font-size 15px
+        line-height 25px
+        margin 0 0 20px
+
+    &__button
+        margin 0 0 25px
+
+
+    &__close
+        display block
+        width 23px
+        height 23px
+        background-color transparent
+        font-size 0
+        color transparent
+        border none
+        outline none
+        position absolute
+        top 30px
+        right 20px
+        margin-left -11px
+        cursor pointer
+        &::before
+        &::after
+            content ""
+            display block
+            width 29px
+            height 2px
+            border-radius 1px
+            opacity 0.2
+            background-color #231f20
+            position absolute
+            top 0
+            left 0
+            transition all .3s ease
+        &::before
+            transform rotate(45deg) translate(5px,10px)
+        &::after
+            transform rotate(-45deg) translate(-10px,5px)
+        &:hover
+            &::before
+            &::after
+                opacity 1
+
+
+

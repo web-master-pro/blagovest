@@ -1,0 +1,274 @@
+include ../button-blue/button-blue
+include ../menu-branch/menu-branch
+
+mixin m-box-about()
+    // Всплывающее меню для пункта "О нас" главного меню
+    .m-box&attributes(attributes)#m-box-about
+        .m-box__in
+            button(title="Закрыть (Esc)").m-box__close
+            .m-box__col1
+                h3.m-box__title О нас
+                p.m-box__text Каждый человек, переживший на себе Божью любовь, становится носителем и проводником этой любви на всяком месте, во всякое время, распространяя, таким образом, Царство Божье.
+                +button-blue("Онлайн трансляция")(class="button-blue--small m-box__button")
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Кто мы
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link История
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Во что мы верим
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Наше видение
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Наш пастор
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Контакты
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Филиалы
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Колизей
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Гостиница СПБ
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Серебристый
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Балканы
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Ленинградская обл.
+
+                +menu-branch(class="menu-branch--small")
+
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Новое начало с&nbsp;богом
+
+                +button-blue("Посетить семинар")(class="button-blue--small m-box__button")
+
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Я здесь впервые
+
+            .m-box__col3
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Истории
+
+
+mixin m-box-join()
+    // Всплывающее меню для пункта "Присоединиться" главного меню
+    .m-box&attributes(attributes)#m-box-join
+        .m-box__in
+            button(title="Закрыть (Esc)").m-box__close
+            .m-box__col1
+                h3.m-box__title Присоединиться
+                p.m-box__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo laborum libero rem, hic sint rerum facilis qui ad, maiores ab quia autem laudantium aspernatur adipisci atque, doloremque voluptate consequuntur quidem!
+                +button-blue("Онлайн трансляция")(class="button-blue--small m-box__button")
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+            .m-box__col3
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+
+
+mixin m-box-help()
+    // Всплывающее меню для пункта "Помощь" главного меню
+    .m-box&attributes(attributes)#m-box-help
+        .m-box__in
+            button(title="Закрыть (Esc)").m-box__close
+            .m-box__col1
+                h3.m-box__title Помощь
+                p.m-box__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo laborum libero rem, hic sint rerum facilis qui ad, maiores ab quia autem laudantium aspernatur adipisci atque, doloremque voluptate consequuntur quidem!
+                +button-blue("Онлайн трансляция")(class="button-blue--small m-box__button")
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+            .m-box__col3
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+
+mixin m-box-media()
+    // Всплывающее меню для пункта "Медиа" главного меню
+    .m-box&attributes(attributes)#m-box-media
+        .m-box__in
+            button(title="Закрыть (Esc)").m-box__close
+            .m-box__col1
+                h3.m-box__title Медиа
+                p.m-box__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo laborum libero rem, hic sint rerum facilis qui ad, maiores ab quia autem laudantium aspernatur adipisci atque, doloremque voluptate consequuntur quidem!
+                +button-blue("Онлайн трансляция")(class="button-blue--small m-box__button")
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+            .m-box__col2
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+            .m-box__col3
+                ul.menu-box
+                    li.menu-box__item
+                        a(href="#").menu-box__link Пункт меню
+                        ul.menu-box-sub
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+                            li.menu-box-sub__item
+                                a(href="#").menu-box-sub__link Пункт меню
+
+
