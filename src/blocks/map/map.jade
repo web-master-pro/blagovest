@@ -1,16 +1,12 @@
 include ../button-more/button-more
 include ../baloon/baloon
 
-mixin map-script()
-    script(src="https://maps.googleapis.com/maps/api/js?sensor=false")
-
 mixin map()
     .map&attributes(attributes)
         +baloon(class="map__baloon")
         .map__map#map-holder
         .map__button-wrapper
             +button-more("Показать на карте")(class="map__button js-map-button")
-        +map-script()
 
 mixin map-extended()
     .map&attributes(attributes)
@@ -18,4 +14,3 @@ mixin map-extended()
         .map__map#map-holder
         .map__button-wrapper
             +button-more("Показать на карте")(class="map__button js-map-button")
-        +map-script()
