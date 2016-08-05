@@ -1,22 +1,68 @@
 mixin baloon()
     .baloon&attributes(attributes)
-        h4.baloon__caption Адрес церкви
-        address.baloon__text ул. Ярослава Гашека, д.5, ТЦ «Балатон» (2 этаж)
-        h4.baloon__caption Время
-        p.baloon__texts Воскресное Богослужение: 12:00
-        h4.baloon__caption Телефон
-        p.baloon__text <a href="tel:89117745040" class="baloon__phone">8-911-774-50-40</a> (с 12:00 до 18:00)
+        .baloon__branch.active
+            h4.baloon__caption Адрес церкви
+            address(data-latitude="59.830676" data-longitude="30.385065").baloon__address ул. Ярослава Гашека, д.5, ТЦ «Балатон» (2 этаж)
+            h4.baloon__caption Время
+            p.baloon__texts Воскресное Богослужение: 12:00
+            h4.baloon__caption Телефон
+            p.baloon__text <a href="tel:89117745040" class="baloon__phone">8-911-774-50-40</a> (с 12:00 до 18:00)
 
 mixin baloon-extended()
     .baloon&attributes(attributes)
-        .baloon__top
-            img(src="assets/img/pastor.jpg" alt="Дмитрий Шатров").baloon__img
-            h4.baloon__caption Старший пастор церкви
-            p.ballon__text Дмитрий Шатров
-        p.baloon__text Наша церковь встечается каждое воскресенье! Мы будем рады встрече  с Вами, Вашей семьей и друзьями уже в это воскресенье в 9:45, 12:00 или 15:00
-        h4.baloon__caption Адрес церкви
-        address.baloon__text ул. Ярослава Гашека, д.5, ТЦ «Балатон» (2 этаж)
-        h4.baloon__caption Время
-        p.baloon__texts Воскресное Богослужение: 12:00
-        h4.baloon__caption Телефон
-        p.baloon__text <a href="tel:89117745040" class="baloon__phone">8-911-774-50-40</a> (с 12:00 до 18:00)
+        
+        // Санкт-Петербург
+        .baloon__branch.active
+            .baloon__top
+                img(src="assets/img/pastor.jpg" alt="Дмитрий Шатров").baloon__img
+                h4.baloon__caption Старший пастор церкви
+                p.ballon__text Дмитрий Шатров
+            p.baloon__text Наша церковь встечается каждое воскресенье! Мы будем рады встрече  с Вами, Вашей семьей и друзьями уже в это воскресенье в 9:45, 12:00 или 15:00
+            h4.baloon__caption Адрес церкви
+            address(data-latitude="59.830676" data-longitude="30.385065").baloon__address Санкт-Петербург, ул. Ярослава Гашека, д.5, ТЦ «Балатон» (2 этаж)
+            h4.baloon__caption Время
+            p.baloon__texts Воскресное Богослужение: 12:00
+            h4.baloon__caption Телефон
+            p.baloon__text <a href="tel:89117745040" class="baloon__phone">8-911-774-50-40</a> (с 12:00 до 18:00)
+        
+        // Москва
+        .baloon__branch
+            .baloon__top
+                img(src="assets/img/pastor.jpg" alt="Дмитрий Шатров").baloon__img
+                h4.baloon__caption Старший пастор церкви
+                p.ballon__text Дмитрий Шатров
+            p.baloon__text Наша церковь встечается каждое воскресенье! Мы будем рады встрече с Вами, Вашей семьей и друзьями уже в это воскресенье в 9:45, 12:00 или 15:00
+            h4.baloon__caption Адрес церкви
+            address(data-latitude="55.7520263" data-longitude="37.6153107").baloon__address Москва, ул. Ярослава Гашека, д.5, ТЦ «Балатон» (2 этаж)
+            h4.baloon__caption Время
+            p.baloon__texts Воскресное Богослужение: 12:00
+            h4.baloon__caption Телефон
+            p.baloon__text <a href="tel:89117745040" class="baloon__phone">8-911-774-50-40</a> (с 12:00 до 18:00)
+
+        // Екатеринбург
+        .baloon__branch
+            .baloon__top
+                img(src="assets/img/pastor.jpg" alt="Дмитрий Шатров").baloon__img
+                h4.baloon__caption Старший пастор церкви
+                p.ballon__text Дмитрий Шатров
+            p.baloon__text Наша церковь встечается каждое воскресенье! Мы будем рады встрече с Вами, Вашей семьей и друзьями уже в это воскресенье в 9:45, 12:00 или 15:00
+            h4.baloon__caption Адрес церкви
+            address(data-latitude="56.8216777" data-longitude="60.6000401").baloon__address Екатеринбург, ул. Ярослава Гашека, д.5, ТЦ «Балатон» (2 этаж)
+            h4.baloon__caption Время
+            p.baloon__texts Воскресное Богослужение: 12:00
+            h4.baloon__caption Телефон
+            p.baloon__text <a href="tel:89117745040" class="baloon__phone">8-911-774-50-40</a> (с 12:00 до 18:00)
+
+        // Омск
+        .baloon__branch
+            .baloon__top
+                img(src="assets/img/pastor.jpg" alt="Дмитрий Шатров").baloon__img
+                h4.baloon__caption Старший пастор церкви
+                p.ballon__text Дмитрий Шатров
+            p.baloon__text Наша церковь встечается каждое воскресенье! Мы будем рады встрече с Вами, Вашей семьей и друзьями уже в это воскресенье в 9:45, 12:00 или 15:00
+            h4.baloon__caption Адрес церкви
+            address(data-latitude="54.9776541" data-longitude="73.3775753").baloon__address Омск, ул. Ярослава Гашека, д.5, ТЦ «Балатон» (2 этаж)
+            h4.baloon__caption Время
+            p.baloon__texts Воскресное Богослужение: 12:00
+            h4.baloon__caption Телефон
+            p.baloon__text <a href="tel:89117745040" class="baloon__phone">8-911-774-50-40</a> (с 12:00 до 18:00)

@@ -15,20 +15,24 @@ mixin menu-category()
                 a(href="#").menu-category__link Достопримечательности
             
 mixin menu-category-branch()
-    .menu-category&attributes(attributes)
+    .menu-category#contacts-menu-branch&attributes(attributes)
         button.menu-category__button
             span.menu-category__caption
                 span.menu-category__default Выбрать другой филиал
                 span.menu-category__current Санкт-Петербург
         ul.menu-category__menu
             li.menu-category__item
-                a(href="#").menu-category__link Санкт-Петербург
+                a(href="#piter").menu-category__link Санкт-Петербург
             li.menu-category__item
-                a(href="#").menu-category__link Москва
+                a(href="#moscow").menu-category__link Москва
             li.menu-category__item
-                a(href="#").menu-category__link Екатеринбург
+                a(href="#ekaterinburg").menu-category__link Екатеринбург
             li.menu-category__item
-                a(href="#").menu-category__link Омск
-        img(src="assets/img/branch-1.jpg" alt="Санкт-Питербург").menu-category__img
-            
+                a(href="#omsk").menu-category__link Омск
+        .menu-category__images
+            img(src="assets/img/branches/branch-piter.jpg" alt="Санкт-Петербург").menu-category__img.active
+            img(src="assets/img/branches/branch-moscow.jpg" alt="Москва").menu-category__img
+            img(src="assets/img/branches/branch-ekaterinburg.jpg" alt="Екатеринбург").menu-category__img
+            img(src="assets/img/branches/branch-omsk.jpg" alt="Омск").menu-category__img
+
 

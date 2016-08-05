@@ -14,23 +14,22 @@
         padding 20px 20px 20px
         text-align center
         +above(1152px)
-            padding 360px 20px 20px
+            padding 60px 20px 20px
+            align-self center
 
 
     &__slide
-        display block
         width 100%
-        height 540px
+        min-height 540px
         background-repeat no-repeat
         background-position center center
         background-size cover
+        display flex
+        flex-flow row nowrap
+        justify-content center
+        align-items center
         +above(1152px)
-            height 740px
-        +below(1151px)
-            display flex
-            flex-flow row nowrap
-            justify-content center
-            align-items center
+            min-height 100vh
 
     &__nav
         display block
