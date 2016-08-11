@@ -10,9 +10,9 @@ $(document).ready(function(){
     $(".js-media-button").click(function(e){
         e.preventDefault();
         if (isMobile) {
-            $(".media.hide-mobile").fadeIn(300);
+            $(".media.hide-mobile").fadeIn(300).css({"display": "inline-block"});
         } else {
-            $(".media.hide-desktop").fadeIn(300);
+            $(".media.hide-desktop").fadeIn(300).css({"display": "inline-block"});
         };
         $(this).fadeOut(300);
     });

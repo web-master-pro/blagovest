@@ -7,16 +7,16 @@ $(document).ready(function(){
         markerImage = 'assets/img/map-marker.png';
         styleArray = [{featureType: "all"}];
 
-    function getCoords(){
-        var addressEl = $(".baloon__branch.active .baloon__address");
+    function getCoords(index){
+        var branchEl = $(".baloon__branch").eq(index),
+            addressEl = $(branchEl).find(".baloon__address");
         if (addressEl.length > 0){
             latitude = addressEl.attr("data-latitude"),
             longitude = addressEl.attr("data-longitude");
         };
-        // console.log(latitude + "; " + longitude);
     };
 
-    getCoords();
+    getCoords(0);
 
     function initializeMap() {
         var width = window.innerWidth
@@ -47,17 +47,27 @@ $(document).ready(function(){
 
     google.maps.event.addDomListener(window, 'load', initializeMap);
 
-    $(window).on('hashchange', function() {
-        if (window.location.hash) {
-            if ($(".map").length > 0) {
-                getCoords();
-                setTimeout(function() {
-                    google.maps.event.trigger(map, 'resize');
-                }, 300);
-                initializeMap();
+    function loadMapByHash(){
+        if ($(".map").length > 0) {
+            if (window.location.hash) {
+                var links = $("#contacts-menu-branch .menu-category__link"),
+                    link = $("#contacts-menu-branch .menu-category__link[href='" + window.location.hash + "']" );
+                if (link) {
+                    var index = $(links).index($(link));
+                    if (index > -1) {
+                        getCoords(index);
+                        setTimeout(function() {
+                            google.maps.event.trigger(map, 'resize');
+                        }, 300);
+                        initializeMap();
+                    };
+                };
             };
-
         };
+    };
+
+    $(window).on('hashchange', function() {
+        loadMapByHash();
     });
 
     $(".js-map-button").click(function(e){
@@ -69,6 +79,8 @@ $(document).ready(function(){
             google.maps.event.trigger(map, 'resize');
         }, 1000);
     });
+
+    loadMapByHash();
 
 
 });

@@ -173,6 +173,12 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest("dist/assets/fonts/"))
 });
 
+gulp.task('php', function() {
+    return gulp.src("src/php/*.php")
+        .pipe(plumber(options.plumber))
+        .pipe(gulp.dest("dist/assets/"))
+});
+
 
 // WATCH for live reload
 
@@ -209,6 +215,10 @@ gulp.task('watch', function (cb) {
         notify("Fonts").write('');
     });
 
+    watch("src/php/*.php", function(event, cb) {
+        runSequence('php', browserSync.reload);
+        notify("PHP").write('');
+    });
 
 });
 
@@ -217,7 +227,7 @@ gulp.task('watch', function (cb) {
 gulp.task('build', function (cb) {
     return runSequence(
         'clean',
-        ['img', 'favicons', 'fonts', 'js'],
+        ['img', 'favicons', 'fonts', 'js', 'php'],
         ['style'],
         'html', cb);
 });
