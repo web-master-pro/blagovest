@@ -3,16 +3,16 @@ mixin menu-category()
         button.menu-category__button
             span.menu-category__caption
                 span.menu-category__default Выбрать другую категорию
-                span.menu-category__current Воскресные богослужения
+                span(data-cat="sunday").menu-category__current Воскресные богослужения
         ul.menu-category__menu
             li.menu-category__item
-                a(href="#").menu-category__link Воскресные богослужения
+                a(href="#sunday").menu-category__link Воскресные богослужения
             li.menu-category__item
-                a(href="#").menu-category__link Библиотека
+                a(href="#library").menu-category__link Библиотека
             li.menu-category__item
-                a(href="#").menu-category__link Творчество пастора Михаила
+                a(href="#creativity").menu-category__link Творчество пастора Михаила
             li.menu-category__item
-                a(href="#").menu-category__link Достопримечательности
+                a(href="#sight").menu-category__link Достопримечательности
             
 mixin menu-category-branch()
     .menu-category#contacts-menu-branch&attributes(attributes)

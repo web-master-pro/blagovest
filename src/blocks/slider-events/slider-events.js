@@ -43,10 +43,11 @@ $(document).ready(function(){
 
 
     function initSlider(){
-        if (slider) {
-            slider.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
-            slider.find('owl-stage-outer').children().unwrap();
-        };
+        slider.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+        slider.find('owl-stage-outer').children().unwrap();
+        slider.removeData();
+
+        $('.slider-events__slider .owl-stage-outer').children().unwrap();
 
         $(".slider-events__slider.active .slider-events__slide").each(function( index ) {
             $(this).attr("data-index", index);
@@ -54,13 +55,15 @@ $(document).ready(function(){
 
         totalItems = $(".slider-events__slider.active .slider-events__slide").length;
 
-        startItem = $(".slider-events__slider.active .slider-events__slider").attr("data-start-index");
+        startItem = $(".slider-events__slider.active").attr("data-start-index");
         if (!startItem) {
             startItem = 1;
         };
-        if (totalItems < startItem + 1) {
+        if (totalItems < +startItem + 1) {
             startItem = 0;
         };
+
+        sliderSettings.startPosition = startItem;
 
         if (totalItems < 1) {
             $(".slider-events__date").text("Нет событий");
@@ -68,8 +71,14 @@ $(document).ready(function(){
 
         updateSliderNav(startItem);
 
-        slider = $('.slider-events__slider.active');
-        slider.owlCarousel(sliderSettings);
+        slider = null;
+
+        var timer;
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+            slider = $('.slider-events__slider.active');
+            slider.owlCarousel(sliderSettings);
+        }, 500);
 
     };
 
@@ -96,22 +105,23 @@ $(document).ready(function(){
 
     loadEventsByHash();
 
-    slider.on("changed.owl.carousel", function(event) {
+    $(document).on("changed.owl.carousel", slider, function(event) {
         var currentSlideIndex = $(event.target)
             .find(".owl-item")
             .eq(event.item.index)
             .find(".slider-events__slide")
             .attr("data-index");
-        updateSliderNav(currentSlideIndex);
+            updateSliderNav(currentSlideIndex);
     });
 
     $(".slider-events__button-next").click(function() {
-        slider.trigger("next.owl.carousel",[1500]);
+        $(slider).trigger("next.owl.carousel",[1500]);
     });
 
-    $(".slider-events__button-prev").click(function() {
-        slider.trigger("prev.owl.carousel",[1500]);
+    $(document).on("click", ".slider-events__button-prev", function() {
+        $(slider).trigger("prev.owl.carousel",[1500]);
     });
+
 
 
 });

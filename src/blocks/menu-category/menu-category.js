@@ -41,36 +41,12 @@ $(document).ready(function(){
         return result;
     });
 
-    // function switchBranch() {
-    //     if (window.location.hash) {
-    //         var hash = window.location.hash.substring(1);
-    //         if ($("#contacts-menu-branch").length > 0) {
-    //             console.log(hash);
-    //         }
-    //     }
-    // };
-
-    // function GetLocationByAddress(address) {
-    //     var geocoder = new google.maps.Geocoder();
-    //     console.log(address);
-    //     geocoder.geocode({ 'address': address }, function (results, status) {
-    //         if (status == google.maps.GeocoderStatus.OK) {
-    //             var latitude = results[0].geometry.location.lat();
-    //             var longitude = results[0].geometry.location.lng();
-    //             console.log("Latitude: " + latitude + "\nLongitude: " + longitude);
-    //         } else {
-    //             console.log("Request failed.")
-    //         }
-    //     });
-    // };
-
     function switchBranch(index){
         var branchCaption = $(".menu-category__link").eq(index).text();
         $(".choose-branch__title").text(branchCaption);
         $(".menu-category__current").text(branchCaption);
         $(".menu-category__img").removeClass("active");
         $(".menu-category__img").eq(index).addClass("active");
-
         $(".baloon__branch").removeClass("active");
         $(".baloon__branch").eq(index).addClass("active");
         $(".team__branch").removeClass("active");
@@ -78,7 +54,7 @@ $(document).ready(function(){
     };
 
     $(".choose-branch .menu-category__link").click(function(e){
-        var links = $("#contacts-menu-branch .menu-category__link"),
+        var links = $(".menu-category__link"),
             index = $(links).index($(this)),
             dropdown = $(".menu-category__menu"),
             menu = $(".menu-category");
