@@ -26,6 +26,8 @@ $(document).ready(function(){
                     if ( ((isMobile) && ($(".media.hide-mobile").length < 1)) ||
                          ((!isMobile) && ($(".media.hide-desktop").length < 1)) ) {
                         $(".js-media-button").fadeOut(0);
+                    } else {
+                        $(".js-media-button").fadeIn(0);
                     };
                 }
             });

@@ -144,6 +144,12 @@
         text-align center
         text-transform uppercase
         position relative
+        &:first-child
+            background-color #fbfbfb
+            background-position 50% 50%
+            background-repeat no-repeat
+            background-size 26px 25px
+            background-image embedurl("../../svg/download.svg", "")
 
     &__link
         color #231f20
@@ -162,11 +168,8 @@
             text-decoration none
 
         ^[0]__item:first-child &
-            background-color #fbfbfb
-            background-position 50% 50%
-            background-repeat no-repeat
-            background-size 26px 25px
-            background-image embedurl("../../svg/download.svg", "")
+            cursor default
             &:hover
-                background-color #faa927
-                background-image embedurl("../../svg/download-hover.svg", "")
+                color @color
+                background-color transparent
+

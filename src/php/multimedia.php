@@ -233,9 +233,7 @@
             </div>
         </div>
         <ul class="media-links media__links">
-            <li class="media-links__item">
-                <a href="#" target="_blank" class="media-links__link"></a>
-            </li>
+            <li class="media-links__item"></li>
             <li class="media-links__item"><a href="#" target="_blank" class="media-links__link">mp3</a>
             </li>
             <li class="media-links__item"><a href="#" target="_blank" class="media-links__link">avi</a>

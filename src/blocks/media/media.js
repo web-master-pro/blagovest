@@ -17,4 +17,9 @@ $(document).ready(function(){
         $(this).fadeOut(300);
     });
 
+    $(document).on("click", ".media-links__item:first-child .media-links__link", function(e){
+        e.preventDefault();
+        return false;
+    });
+
 });
