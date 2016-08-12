@@ -4,10 +4,11 @@ mixin choose-branch()
     .choose-branch&attributes(attributes)
         .choose-branch__in
             h2.choose-branch__title Санкт-Петербург
-            +menu-branch(class="choose-branch__menu js-choose-branch-menu")
-
-mixin choose-branch-with-img()
-    .choose-branch&attributes(attributes)
-        .choose-branch__in
-            h2.choose-branch__title Санкт-Петербург
+            //- +menu-branch(class="choose-branch__menu js-choose-branch-menu")
             +menu-category-branch(class="choose-branch__menu")
+
+//- mixin choose-branch-with-img()
+//-     .choose-branch&attributes(attributes)
+//-         .choose-branch__in
+//-             h2.choose-branch__title Санкт-Петербург
+//-             +menu-category-branch(class="choose-branch__menu")

@@ -1,19 +1,22 @@
 $(document).ready(function(){
 
-
-    $(".slider-events__slide").each(function( index ) {
-        $(this).attr("data-index", index);
-    });
-
-    var totalItems = $(".slider-events__slide").length;
-
-    startItem = $(".slider-events__slider").attr("data-start-index");
-    if (!startItem) startItem = 1;
-
-    updateSliderNav(startItem);
+    var slider = $('.slider-events__slider.active'),
+        totalItems,
+        startItem;
+        sliderSettings = {
+            loop: false,
+            nav: false,
+            dots: false,
+            items: 1,
+            slideBy: 1,
+            startPosition: 1,
+            navSpeed: 1500,
+            autoHeight: true
+        };
 
     function updateSliderNav(currentItem) {
-        var currentDate = $(".slider-events__slide[data-index='" + currentItem + "']").attr("data-date"),
+
+        var currentDate = $(".slider-events__slider.active .slider-events__slide[data-index='" + currentItem + "']").attr("data-date"),
             prevDate, nextDate,
             prevItem = +currentItem - 1,
             nextItem = +currentItem + 1;
@@ -25,47 +28,89 @@ $(document).ready(function(){
         if (prevItem < 0) {
             $(".slider-events__button-prev").fadeOut(300);
         } else {
-            prevDate = $(".slider-events__slide[data-index='" + prevItem  + "']").attr("data-date");
+            prevDate = $(".slider-events__slider.active .slider-events__slide[data-index='" + prevItem  + "']").attr("data-date");
             $(".slider-events__prev .button-event__date").text(prevDate);
         };
 
         if (nextItem > totalItems - 1) {
             $(".slider-events__button-next").fadeOut(300);
         } else {
-            nextDate = $(".slider-events__slide[data-index='" + nextItem  + "']").attr("data-date");
+            nextDate = $(".slider-events__slider.active .slider-events__slide[data-index='" + nextItem  + "']").attr("data-date");
             $(".slider-events__next .button-event__date").text(nextDate);
         };
 
     };
 
-    var owl = $('.slider-events__slider');
-    owl.owlCarousel({
-        loop: false,
-        nav: false,
-        dots: false,
-        items: 1,
-        slideBy: 1,
-        startPosition: 1,
-        navSpeed: 1500,
-        autoHeight: true
+
+    function initSlider(){
+        if (slider) {
+            slider.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+            slider.find('owl-stage-outer').children().unwrap();
+        };
+
+        $(".slider-events__slider.active .slider-events__slide").each(function( index ) {
+            $(this).attr("data-index", index);
+        });
+
+        totalItems = $(".slider-events__slider.active .slider-events__slide").length;
+
+        startItem = $(".slider-events__slider.active .slider-events__slider").attr("data-start-index");
+        if (!startItem) {
+            startItem = 1;
+        };
+        if (totalItems < startItem + 1) {
+            startItem = 0;
+        };
+
+        if (totalItems < 1) {
+            $(".slider-events__date").text("Нет событий");
+        };
+
+        updateSliderNav(startItem);
+
+        slider = $('.slider-events__slider.active');
+        slider.owlCarousel(sliderSettings);
+
+    };
+
+    function loadEventsByHash(){
+        if ($(".events").length > 0) {
+            if (window.location.hash) {
+                var links = $(".events .menu-category__link"),
+                    link = $(".events .menu-category__link[href='" + window.location.hash + "']" );
+                if (link) {
+                    var index = $(links).index($(link));
+                    if (index > -1) {
+                        $(".slider-events__slider").removeClass("active").css({"display":"none"});
+                        $(".slider-events__slider").eq(index).addClass("active").css({"display":"block"});
+                    };
+                };
+            };
+            initSlider();
+        };
+    };
+
+    $(window).on('hashchange', function() {
+        loadEventsByHash();
     });
 
-    owl.on("changed.owl.carousel", function(event) {
+    loadEventsByHash();
+
+    slider.on("changed.owl.carousel", function(event) {
         var currentSlideIndex = $(event.target)
             .find(".owl-item")
             .eq(event.item.index)
             .find(".slider-events__slide")
             .attr("data-index");
         updateSliderNav(currentSlideIndex);
-        // updateSliderCounter(currentItem,totalItems);
     });
 
     $(".slider-events__button-next").click(function() {
-        owl.trigger("next.owl.carousel",[1500]);
+        slider.trigger("next.owl.carousel",[1500]);
     });
 
     $(".slider-events__button-prev").click(function() {
-        owl.trigger("prev.owl.carousel",[1500]);
+        slider.trigger("prev.owl.carousel",[1500]);
     });
 
 

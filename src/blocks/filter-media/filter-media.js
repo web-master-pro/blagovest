@@ -15,19 +15,21 @@ $(document).ready(function(){
             pastor = $("#filter-media-select-pastor").val(),
             actuality = $("#filter-media-select-actuality").val(),
             params = "category="+category+"&cycle="+cycle+"&pastor="+pastor+"&actuality="+actuality;
-        $.ajax({
-            type: "POST",
-            url: $(".filter-media").attr("data-action"),
-            data: params,
-            success: function(mediadata){
-                $(".media-list__container").html(mediadata);
-                var isMobile = ($(window).width() < 1152);
-                if ( ((isMobile) && ($(".media.hide-mobile").length < 1)) ||
-                     ((!isMobile) && ($(".media.hide-desktop").length < 1)) ) {
-                    $(".js-media-button").fadeOut(0);
-                };
-            }
-        });
+        if ($(".page-multimedia").length > 0) {
+            $.ajax({
+                type: "POST",
+                url: $(".filter-media").attr("data-action"),
+                data: params,
+                success: function(mediadata){
+                    $(".media-list__container").html(mediadata);
+                    var isMobile = ($(window).width() < 1152);
+                    if ( ((isMobile) && ($(".media.hide-mobile").length < 1)) ||
+                         ((!isMobile) && ($(".media.hide-desktop").length < 1)) ) {
+                        $(".js-media-button").fadeOut(0);
+                    };
+                }
+            });
+        };
     };
 
     loadMedia();

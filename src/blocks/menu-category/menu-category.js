@@ -21,7 +21,7 @@ $(document).ready(function(){
             menu.addClass("on");
             dropdown.addClass("on").slideDown(300);
             updateMenuCategoryMaxHeight();
-        }
+        };
     });
 
     $(document).click(function(event){
@@ -68,19 +68,16 @@ $(document).ready(function(){
         var branchCaption = $(".menu-category__link").eq(index).text();
         $(".choose-branch__title").text(branchCaption);
         $(".menu-category__current").text(branchCaption);
-        $(".menu-category__img").removeClass("active")
-        $(".menu-category__img").eq(index).addClass("active")
+        $(".menu-category__img").removeClass("active");
+        $(".menu-category__img").eq(index).addClass("active");
+
         $(".baloon__branch").removeClass("active");
         $(".baloon__branch").eq(index).addClass("active");
         $(".team__branch").removeClass("active");
         $(".team__branch").eq(index).addClass("active");
-
-        // var address = $(".baloon__branch.active .baloon__address").text();
-        // GetLocationByAddress(address);
     };
 
-    $("#contacts-menu-branch .menu-category__link").click(function(e){
-        // e.preventDefault();
+    $(".choose-branch .menu-category__link").click(function(e){
         var links = $("#contacts-menu-branch .menu-category__link"),
             index = $(links).index($(this)),
             dropdown = $(".menu-category__menu"),
@@ -94,8 +91,8 @@ $(document).ready(function(){
 
     function loadByHash() {
         if (window.location.hash) {
-            var links = $("#contacts-menu-branch .menu-category__link"),
-                link = $("#contacts-menu-branch .menu-category__link[href='" + window.location.hash + "']" );
+            var links = $(".choose-branch .menu-category__link"),
+                link = $(".choose-branch .menu-category__link[href='" + window.location.hash + "']" );
             if (link) {
                 var index = $(links).index($(link));
                 if (index > -1) {

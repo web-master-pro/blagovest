@@ -6,15 +6,132 @@ mixin slider-events()
                     button.button-event.button-event--prev.slider-events__button-prev
                         span.button-event__icon
                         span.button-event__caption Предыдущий день
-                        span.button-event__date 22 июля, четверг
+                        span.button-event__date
                 .slider-events__current
-                    .slider-events__date 23 июля, пятница
+                    .slider-events__date
                 .slider-events__next
                     button.button-event.button-event--next.slider-events__button-next
                         span.button-event__icon
                         span.button-event__caption Следующий день
-                        span.button-event__date 24 июля, суббота
+                        span.button-event__date
 
+
+        // События для ПЕРВОГО филиала в списке филиалов
+        .slider-events__slider(data-start-index="1").active
+            // data-start-index - здесь указываем индекс (начинаются с нуля) слайда, который будет показываться первым.
+            .slider-events__slide(data-date="22 июля, четверг")
+                // data-date - из этого атрибута (должен быть в каждом слайде) скрипт подставляет даты в навигацию слайдера
+                .event
+                    img(src="assets/img/events/event-2.jpg" alt="").event__photo
+                    time(datetime="2016-07-23 19:00").event__time 19:00
+                    p.event__text <strong>Питер:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+                .event
+                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
+                    time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
+                    p.event__text <strong>Питер:</strong> Молодежная молитва (каждую пятницу)
+                .event
+                    time(datetime="2016-07-23 21:15").event__time 21:15
+                    p.event__text <strong>Питер:</strong> Изучение Библии индуктивным методом (каждую пятницу)
+
+            .slider-events__slide(data-date="23 июля, пятница")
+                .event
+                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
+                    time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
+                    p.event__text <strong>Питер:</strong> Молодежная молитва (каждую пятницу)
+                .event
+                    img(src="assets/img/events/event-2.jpg" alt="").event__photo
+                    time(datetime="2016-07-23 19:00").event__time 19:00
+                    p.event__text <strong>Питер:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+                .event
+                    time(datetime="2016-07-23 21:15").event__time 21:15
+                    p.event__text <strong>Питер:</strong> Изучение Библии индуктивным методом (каждую пятницу)
+
+            .slider-events__slide(data-date="24 июля, суббота")
+                .event
+                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
+                    time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
+                    p.event__text <strong>Питер:</strong> Молодежная молитва (каждую пятницу)
+                .event
+                    img(src="assets/img/events/event-2.jpg" alt="").event__photo
+                    time(datetime="2016-07-23 19:00").event__time 19:00
+                    p.event__text <strong>Питер:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+
+            .slider-events__slide(data-date="25 июля, воскресенье")
+                .event
+                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
+                    time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
+                    p.event__text <strong>Питер:</strong> Молодежная молитва (каждую пятницу)
+                .event
+                    time(datetime="2016-07-23 21:15").event__time 21:15
+                    p.event__text <strong>Питер:</strong> Изучение Библии индуктивным методом (каждую пятницу)
+                .event
+                    img(src="assets/img/events/event-2.jpg" alt="").event__photo
+                    time(datetime="2016-07-23 19:00").event__time 19:00
+                    p.event__text <strong>Питер:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+                .event
+                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
+                    time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
+                    p.event__text <strong>Питер:</strong> Молодежная молитва (каждую пятницу)
+
+
+        // События для ВТОРОГО филиала в списке филиалов
+        .slider-events__slider(data-start-index="1")
+            // data-start-index - здесь указываем индекс (начинаются с нуля) слайда, который будет показываться первым.
+            .slider-events__slide(data-date="4 августа, четверг")
+                // data-date - из этого атрибута (должен быть в каждом слайде) скрипт подставляет даты в навигацию слайдера
+                .event
+                    img(src="assets/img/events/event-2.jpg" alt="").event__photo
+                    time(datetime="2016-08-04 19:00").event__time 19:00
+                    p.event__text <strong>Москва:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+                .event
+                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
+                    time(datetime="2016-08-04 07:00").event__time 7:00 – 9:00
+                    p.event__text <strong>Москва:</strong> Молодежная молитва (каждую пятницу)
+                .event
+                    time(datetime="2016-08-04 21:15").event__time 21:15
+                    p.event__text <strong>Москва:</strong> Изучение Библии индуктивным методом (каждую пятницу)
+
+            .slider-events__slide(data-date="5 августа, пятница")
+                .event
+                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
+                    time(datetime="2016-08-05 07:00").event__time 7:00 – 9:00
+                    p.event__text <strong>Москва:</strong> Молодежная молитва (каждую пятницу)
+                .event
+                    img(src="assets/img/events/event-2.jpg" alt="").event__photo
+                    time(datetime="2016-08-05 19:00").event__time 19:00
+                    p.event__text <strong>Москва:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+                .event
+                    time(datetime="2016-08-05 21:15").event__time 21:15
+                    p.event__text <strong>Москва:</strong> Изучение Библии индуктивным методом (каждую пятницу)
+
+            .slider-events__slide(data-date="6 августа, суббота")
+                .event
+                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
+                    time(datetime="2016-08-06 07:00").event__time 7:00 – 9:00
+                    p.event__text <strong>Москва:</strong> Молодежная молитва (каждую пятницу)
+                .event
+                    img(src="assets/img/events/event-2.jpg" alt="").event__photo
+                    time(datetime="2016-08-06 19:00").event__time 19:00
+                    p.event__text <strong>Москва:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+
+            .slider-events__slide(data-date="7 августа, воскресенье")
+                .event
+                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
+                    time(datetime="2016-08-07 07:00").event__time 7:00 – 9:00
+                    p.event__text <strong>Москва:</strong> Молодежная молитва (каждую пятницу)
+                .event
+                    time(datetime="2016-08-07 21:15").event__time 21:15
+                    p.event__text <strong>Москва:</strong> Изучение Библии индуктивным методом (каждую пятницу)
+                .event
+                    img(src="assets/img/events/event-2.jpg" alt="").event__photo
+                    time(datetime="2016-08-07 19:00").event__time 19:00
+                    p.event__text <strong>Москва:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+                .event
+                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
+                    time(datetime="2016-08-07 07:00").event__time 7:00 – 9:00
+                    p.event__text <strong>Москва:</strong> Молодежная молитва (каждую пятницу)
+            
+        // События для ТРЕТЬЕГО филиала в списке филиалов
         .slider-events__slider(data-start-index="1")
             // data-start-index - здесь указываем индекс (начинаются с нуля) слайда, который будет показываться первым.
             .slider-events__slide(data-date="22 июля, четверг")
@@ -22,52 +139,63 @@ mixin slider-events()
                 .event
                     img(src="assets/img/events/event-2.jpg" alt="").event__photo
                     time(datetime="2016-07-23 19:00").event__time 19:00
-                    p.event__text Общецерковный Вечер Хвалы и&nbsp;Поклонения
-                .event
-                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
-                    time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
-                    p.event__text Молодежная молитва (каждую пятницу)
-                .event
-                    time(datetime="2016-07-23 21:15").event__time 21:15
-                    p.event__text Изучение Библии индуктивным методом (каждую пятницу)
+                    p.event__text <strong>Екатеринбург:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
 
-            .slider-events__slide(data-date="23 июля, пятница")
-                .event
-                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
-                    time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
-                    p.event__text Молодежная молитва (каждую пятницу)
-                .event
-                    img(src="assets/img/events/event-2.jpg" alt="").event__photo
-                    time(datetime="2016-07-23 19:00").event__time 19:00
-                    p.event__text Общецерковный Вечер Хвалы и&nbsp;Поклонения
-                .event
-                    time(datetime="2016-07-23 21:15").event__time 21:15
-                    p.event__text Изучение Библии индуктивным методом (каждую пятницу)
+        // События для ЧЕТВЕРТОГО филиала в списке филиалов
+        // В качестве примера: если для данного филиала нет событий, то НИЧЕГО и не выводим - как здесь.
+        //- .slider-events__slider(data-start-index="1")
+        //-     // data-start-index - здесь указываем индекс (начинаются с нуля) слайда, который будет показываться первым.
+        //-     .slider-events__slide(data-date="22 июля, четверг")
+        //-         // data-date - из этого атрибута (должен быть в каждом слайде) скрипт подставляет даты в навигацию слайдера
+        //-         .event
+        //-             img(src="assets/img/events/event-2.jpg" alt="").event__photo
+        //-             time(datetime="2016-07-23 19:00").event__time 19:00
+        //-             p.event__text <strong>Омск:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+        //-         .event
+        //-             img(src="assets/img/events/event-1.jpg" alt="").event__photo
+        //-             time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
+        //-             p.event__text <strong>Омск:</strong> Молодежная молитва (каждую пятницу)
+        //-         .event
+        //-             time(datetime="2016-07-23 21:15").event__time 21:15
+        //-             p.event__text <strong>Омск:</strong> Изучение Библии индуктивным методом (каждую пятницу)
 
-            .slider-events__slide(data-date="24 июля, суббота")
-                .event
-                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
-                    time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
-                    p.event__text Молодежная молитва (каждую пятницу)
-                .event
-                    img(src="assets/img/events/event-2.jpg" alt="").event__photo
-                    time(datetime="2016-07-23 19:00").event__time 19:00
-                    p.event__text Общецерковный Вечер Хвалы и&nbsp;Поклонения
+        //-     .slider-events__slide(data-date="23 июля, пятница")
+        //-         .event
+        //-             img(src="assets/img/events/event-1.jpg" alt="").event__photo
+        //-             time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
+        //-             p.event__text <strong>Омск:</strong> Молодежная молитва (каждую пятницу)
+        //-         .event
+        //-             img(src="assets/img/events/event-2.jpg" alt="").event__photo
+        //-             time(datetime="2016-07-23 19:00").event__time 19:00
+        //-             p.event__text <strong>Омск:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+        //-         .event
+        //-             time(datetime="2016-07-23 21:15").event__time 21:15
+        //-             p.event__text <strong>Омск:</strong> Изучение Библии индуктивным методом (каждую пятницу)
 
-            .slider-events__slide(data-date="25 июля, воскресенье")
-                .event
-                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
-                    time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
-                    p.event__text Молодежная молитва (каждую пятницу)
-                .event
-                    time(datetime="2016-07-23 21:15").event__time 21:15
-                    p.event__text Изучение Библии индуктивным методом (каждую пятницу)
-                .event
-                    img(src="assets/img/events/event-2.jpg" alt="").event__photo
-                    time(datetime="2016-07-23 19:00").event__time 19:00
-                    p.event__text Общецерковный Вечер Хвалы и&nbsp;Поклонения
-                .event
-                    img(src="assets/img/events/event-1.jpg" alt="").event__photo
-                    time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
-                    p.event__text Молодежная молитва (каждую пятницу)
+        //-     .slider-events__slide(data-date="24 июля, суббота")
+        //-         .event
+        //-             img(src="assets/img/events/event-1.jpg" alt="").event__photo
+        //-             time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
+        //-             p.event__text <strong>Омск:</strong> Молодежная молитва (каждую пятницу)
+        //-         .event
+        //-             img(src="assets/img/events/event-2.jpg" alt="").event__photo
+        //-             time(datetime="2016-07-23 19:00").event__time 19:00
+        //-             p.event__text <strong>Омск:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+
+        //-     .slider-events__slide(data-date="25 июля, воскресенье")
+        //-         .event
+        //-             img(src="assets/img/events/event-1.jpg" alt="").event__photo
+        //-             time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
+        //-             p.event__text <strong>Омск:</strong> Молодежная молитва (каждую пятницу)
+        //-         .event
+        //-             time(datetime="2016-07-23 21:15").event__time 21:15
+        //-             p.event__text <strong>Омск:</strong> Изучение Библии индуктивным методом (каждую пятницу)
+        //-         .event
+        //-             img(src="assets/img/events/event-2.jpg" alt="").event__photo
+        //-             time(datetime="2016-07-23 19:00").event__time 19:00
+        //-             p.event__text <strong>Омск:</strong> Общецерковный Вечер Хвалы и&nbsp;Поклонения
+        //-         .event
+        //-             img(src="assets/img/events/event-1.jpg" alt="").event__photo
+        //-             time(datetime="2016-07-23 07:00").event__time 7:00 – 9:00
+        //-             p.event__text <strong>Омск:</strong> Молодежная молитва (каждую пятницу)
             
