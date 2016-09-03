@@ -74,8 +74,9 @@
             background-color #231f20
             transition background-color .3s ease
     &:hover
-        &::before
-            background-color #174184
+        +above(desktop)
+            &::before
+                background-color #174184
 
     &__pic
         height 200px

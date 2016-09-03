@@ -64,9 +64,11 @@
         margin 15px
         cursor pointer
         transition background-color .3s ease
-        &:hover
         &.active
             background-color #f3a62d
+        &:hover
+            +above(desktop)
+                background-color #f3a62d
         img
             display none
         +above(1152px)

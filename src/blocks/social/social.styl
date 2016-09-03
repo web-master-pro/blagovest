@@ -41,10 +41,11 @@
             opacity 0
 
         &:hover
-            &::before
-                opacity 0
-            &::after
-                opacity 1
+            +above(desktop)
+                &::before
+                    opacity 0
+                &::after
+                    opacity 1
 
         &[href*="vk.com"]
             &

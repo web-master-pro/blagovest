@@ -46,9 +46,11 @@
             margin 15px
             cursor pointer
             transition background-color .3s ease
-            &:hover
             &.active
                 background-color #f3a62d
+            &:hover
+                +above(desktop)
+                    background-color #f3a62d
 
         &.owl-carousel.owl-loaded
             +above(1152px)
@@ -198,8 +200,7 @@
         left 0
         right 0
         bottom 0
-
-
+        animate-slide()
 
 
     &__title

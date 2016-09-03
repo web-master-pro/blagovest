@@ -12,7 +12,9 @@ $(document).ready(function(){
         autoplayHoverPause: true,
         autoplaySpeed: 2000,
         navSpeed: 1500,
-        autoHeight: false
+        autoHeight: false,
+        animateOut: 'fadeOut',
+        animateIn: "fadeOut"
     });
 
     $(".slider-history__next").click(function() {

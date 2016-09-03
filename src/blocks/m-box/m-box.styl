@@ -79,9 +79,10 @@
         &::after
             transform rotate(-45deg) translate(-10px,5px)
         &:hover
-            &::before
-            &::after
-                opacity 1
+            +above(desktop)
+                &::before
+                &::after
+                    opacity 1
 
 
 

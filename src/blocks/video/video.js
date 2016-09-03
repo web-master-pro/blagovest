@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".video").click(function(){
+    $(document).on("click", ".video", function(){
         var video = $(this).find("video").get(0);
 
         $(this).find("video").attr("controls","true");

@@ -21,7 +21,8 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         navSpeed: 1500,
         autoHeight: false,
-        dotsContainer: '.slider-header__dots'
+        dotsContainer: '.slider-header__dots',
+        animateOut: 'fadeOut'
     });
 
     $(".slider-header__next").click(function() {

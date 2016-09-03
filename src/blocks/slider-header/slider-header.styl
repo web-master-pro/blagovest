@@ -13,9 +13,12 @@
         container(1210px)
         padding 20px 20px 20px
         text-align center
+        animate-slide()
         +above(1152px)
             padding 60px 20px 20px
             align-self center
+
+
 
 
     &__slide
@@ -62,9 +65,11 @@
         margin 15px
         cursor pointer
         transition background-color .3s ease
-        &:hover
         &.active
             background-color #f3a62d
+        &:hover
+            +above(desktop)
+                background-color #f3a62d
 
     &__next
     &__prev

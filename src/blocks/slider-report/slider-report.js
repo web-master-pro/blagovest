@@ -24,7 +24,8 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         navSpeed: 1500,
         autoHeight: true,
-        dotsContainer: '.slider-report__dots'
+        dotsContainer: '.slider-report__dots',
+        animateOut: 'fadeOut'
     });
 
     owl.on("changed.owl.carousel", function(event) {

@@ -38,8 +38,9 @@
         backface-visibility hidden
         border-radius 1px
         transition background-color .3s linear, transform 70ms linear
-        .no-touch ^[0]:hover &
-            background-color $color_hover
+        ^[0]:hover &
+            +above(desktop)
+                background-color $color_hover
 
 .button-nav.on .button-nav__in
     background-color transparent !important

@@ -163,13 +163,17 @@
         bottom 0
         transition all .3s ease
         &:hover
-            color white
-            background-color #faa927
+            color @color
             text-decoration none
+            +above(desktop)
+                color white
+                background-color #faa927
+
 
         ^[0]__item:first-child &
             cursor default
             &:hover
                 color @color
-                background-color transparent
+                +above(desktop)
+                    background-color transparent
 

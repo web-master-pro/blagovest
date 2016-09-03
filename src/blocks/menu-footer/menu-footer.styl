@@ -30,8 +30,10 @@
         text-transform uppercase
         transition color .3s ease
         &:hover
-            color $color_hover
+            color @color
             text-decoration none
+            +above(desktop)
+                color $color_hover
 
 
 .menu-footer-sub
@@ -55,5 +57,7 @@
         text-decoration none
         transition color .3s ease
         &:hover
-            color $color_hover
+            color @color
             text-decoration none
+            +above(desktop)
+                color $color_hover

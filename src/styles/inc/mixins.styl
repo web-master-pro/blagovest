@@ -1,3 +1,5 @@
+desktop = 992px
+
 container(w = 1000px)
     display block
     max-width w
@@ -134,3 +136,10 @@ ratio-box( ratio = 1/1 )
         height 0
         padding-top floor((1 / ratio) * 100%, 2)
 
+
+animate-slide()
+    .active &
+        animation-name zoomIn
+        animation-duration .5s
+        animation-fill-mode both
+        animation-delay .5s

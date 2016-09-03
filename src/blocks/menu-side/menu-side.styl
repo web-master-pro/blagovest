@@ -67,8 +67,10 @@
         text-transform uppercase
         transition color .3s ease
         &:hover
-            color $color_hover
+            color @color
             text-decoration none
+            +above(desktop)
+                color $color_hover
 
 .menu-side-sub
     list-style none
@@ -89,6 +91,8 @@
         text-decoration none
         transition color .3s ease
         &:hover
-            color $color_hover
+            color @color
             text-decoration none
+            +above(desktop)
+                color $color_hover
 

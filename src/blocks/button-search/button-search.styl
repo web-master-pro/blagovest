@@ -26,8 +26,9 @@
         bottom 1px
         right 0px
         transition background-color .3s ease
-    .no-touch &:hover
-        &::before
-            border-color $color_hover
-        &::after
-            background-color $color_hover
+    &:hover
+        +above(desktop)
+            &::before
+                border-color $color_hover
+            &::after
+                background-color $color_hover

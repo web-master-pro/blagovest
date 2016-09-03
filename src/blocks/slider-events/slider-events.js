@@ -11,7 +11,8 @@ $(document).ready(function(){
             slideBy: 1,
             startPosition: 1,
             navSpeed: 1500,
-            autoHeight: true
+            autoHeight: true,
+            // animateOut: 'fadeOut'
         };
 
     function updateSliderNav(currentItem) {

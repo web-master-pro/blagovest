@@ -56,7 +56,8 @@ $(document).ready(function(){
         autoplayHoverPause: true,
         autoplaySpeed: 2000,
         autoHeight: true,
-        dotsContainer: '.slider-events-home__dots'
+        dotsContainer: '.slider-events-home__dots',
+        animateOut: 'fadeOut'
     });
 
     owl.on("changed.owl.carousel", function(event) {

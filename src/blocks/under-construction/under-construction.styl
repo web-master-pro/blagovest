@@ -53,6 +53,9 @@
             transition color .3s ease
             text-decoration none
             &:hover
-                color $color_hover
+                color @color
                 text-decoration none
+                +above(desktop)
+                    color $color_hover
+
 

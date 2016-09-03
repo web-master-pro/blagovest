@@ -39,7 +39,6 @@
         &::after
             opacity 0
             background-image linear-gradient(135deg, #14beeb 0%, #1c77bc 100%)
-        &:hover
         ^[0].on &
             color white
             text-decoration none
@@ -47,6 +46,15 @@
                 opacity 0
             &::after
                 opacity 1
+        &:hover
+            +above(desktop)
+                color white
+                text-decoration none
+                &::before
+                    opacity 0
+                &::after
+                    opacity 1
+
         +above(1152px)
             height 40px
             line-height 42px
@@ -124,9 +132,12 @@
         text-decoration none
         padding 20px 20px
         &:hover
-            color #faa927
-            background-color #2b2627
+            color @color
             text-decoration none
+            +above(desktop)
+                color #faa927
+                background-color #2b2627
+
         +above(1152px)
             min-height 40px
             padding 12px 20px

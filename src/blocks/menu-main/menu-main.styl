@@ -28,7 +28,6 @@
         text-decoration none
         padding 0 20px 25px
         text-transform uppercase
-        // border-bottom 2px solid transparent
         transition all .3s ease
         position relative
         z-index 1000
@@ -45,9 +44,7 @@
             right 50%
             bottom 0
             transition all .3s ease
-        &:hover
         &.active
-            // border-bottom 2px solid #faa926
             color white
             text-decoration none
             &::after
@@ -56,5 +53,16 @@
                 right 0
             ^[0].on &
                 color white
+
+        &:hover
+            +above(desktop)
+                color white
+                text-decoration none
+                &::after
+                    width 100%
+                    left 0
+                    right 0
+                ^[0].on &
+                    color white
 
 

@@ -18,11 +18,13 @@
     &--prev
         background-image embedurl("../../svg/arrow-prev-white.svg", "")
         &:hover
-            transform translateX(-2px)
+            +above(desktop)
+                transform translateX(-2px)
     &--next
         background-image embedurl("../../svg/arrow-next-white.svg", "")
         &:hover
-            transform translateX(2px)
+            +above(desktop)
+                transform translateX(2px)
     &--report
         +above(1152px)
             border none

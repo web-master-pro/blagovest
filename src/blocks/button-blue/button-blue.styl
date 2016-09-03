@@ -37,10 +37,11 @@
     &:hover
         color white
         text-decoration none
-        &::before
-            opacity 0
-        &::after
-            opacity 1
+        +above(desktop)
+            &::before
+                opacity 0
+            &::after
+                opacity 1
     &--small
         height 35px
         line-height 37px

@@ -25,7 +25,8 @@ $(document).ready(function(){
         autoplayHoverPause: true,
         autoplaySpeed: 2000,
         navSpeed: 1500,
-        autoHeight: false
+        autoHeight: false,
+        animateOut: 'fadeOut'
     });
 
     owl.on("changed.owl.carousel", function(event) {
