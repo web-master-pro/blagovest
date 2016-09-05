@@ -10,16 +10,15 @@
         bottom 0
 
     &__in
-        container(1210px)
+        flex 0 0 auto
+        align-self center
+        max-width 1210px
         padding 20px 20px 20px
         text-align center
         animate-slide()
         +above(1152px)
             padding 60px 20px 20px
             align-self center
-
-
-
 
     &__slide
         width 100%
@@ -31,8 +30,12 @@
         flex-flow row nowrap
         justify-content center
         align-items center
+        text-align center
         +above(1152px)
             min-height 100vh
+            .ie &
+                padding-top 240px
+            // min-height 1000px
 
     &__nav
         display block

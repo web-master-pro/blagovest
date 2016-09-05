@@ -15,7 +15,7 @@ $(document).ready(function(){
         dots: true,
         items: 1,
         slideBy: 1,
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 6000,
         autoplayHoverPause: true,
         autoplaySpeed: 2000,
