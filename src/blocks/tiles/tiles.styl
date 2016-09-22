@@ -59,6 +59,7 @@
 .tile
     display block
     position absolute
+    overflow hidden
     &--1
     &--2
     &--3
@@ -190,6 +191,17 @@
         background url(img/tiles/tile-11.jpg) no-repeat center center
         background-size cover
 
+    &--2
+    &--4
+    &--6
+    &--8
+    &--10
+        +above(1152px)
+            &:hover
+                & ^[0]__in
+                    transform scale(1.1)
+                    opacity 1
+
     &__in
         display flex
         flex-flow row nowrap
@@ -201,6 +213,8 @@
         right 0
         bottom 0
         animate-slide()
+        transition all .3s ease
+        opacity .85
 
 
     &__title
@@ -220,3 +234,4 @@
         line-height 1
         text-align center
         margin 0
+

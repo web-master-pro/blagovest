@@ -65,6 +65,8 @@ $(document).ready(function(){
         switchBranch(index);
     });
 
+
+
     function loadByHash() {
         if (window.location.hash) {
             var links = $(".choose-branch .menu-category__link"),

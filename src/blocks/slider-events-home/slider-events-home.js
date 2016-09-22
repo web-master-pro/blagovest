@@ -53,7 +53,7 @@ $(document).ready(function(){
         navSpeed: 1500,
         autoplay: true,
         autoplayTimeout: 6000,
-        autoplayHoverPause: true,
+        // autoplayHoverPause: true,
         autoplaySpeed: 2000,
         autoHeight: true,
         dotsContainer: '.slider-events-home__dots',

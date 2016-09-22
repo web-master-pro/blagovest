@@ -7,7 +7,7 @@ $(document).ready(function(){
         if (sidebar.hasClass("on")){
 
             sidebar.css({"left": -sidebarWidth});
-            $("body").css({"left": "", "position": ""});
+            // $("body").css({"left": "", "position": ""});
             $(".page__container").css({"position": "","left": "", "right": ""});
 
             sidebar.removeClass("on");
@@ -16,7 +16,7 @@ $(document).ready(function(){
         } else {
 
             sidebar.css({"left": 0});
-            $("body").css({"left": sidebarWidth});
+            // $("body").css({"left": sidebarWidth});
             $(".page__container").css({"left":sidebarWidth});
 
             setTimeout(function(){
@@ -24,7 +24,7 @@ $(document).ready(function(){
                     "position": "fixed",
                     "right": -sidebarWidth
                 });
-                $("body").css({"position": "fixed"});
+                // $("body").css({"position": "fixed"});
             }, 300);
 
             sidebar.addClass("on");
@@ -63,6 +63,11 @@ $(document).ready(function(){
         if ( (event.keyCode == 27) && (sidebar.hasClass("on")) ) {
             toggleSidebar();
         }
+    });
+
+    $(".menu-side__link, .menu-side-sub__link").click(function(){
+        toggleSidebar();
+        return true;
     });
 
 });
